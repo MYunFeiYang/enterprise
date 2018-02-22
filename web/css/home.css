@@ -1,0 +1,816 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: "Microsoft YaHei";
+}
+
+html {
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.carousel-control .glyphicon {
+    background-color: grey;
+}
+
+.carousel-control .glyphicon:hover {
+    background-color: #00a0e9;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}
+
+.panel {
+    border: none;
+}
+
+.panel .panel-heading {
+    background-color: white;
+}
+
+#brand .panel-title, #skin .panel-title, #cooperation .panel-title, #product .panel-title, #history .panel-title, #knowledge .panel-title, #propaganda .panel-title {
+    font-size: 2rem;
+}
+
+#brand .panel-title, #skin .panel-title, #cooperation .panel-title, #product .panel-title, #history .panel-title, #knowledge .panel-title, #propaganda .panel-title,
+#brand .panel-heading p, #skin .panel-heading p, #cooperation .panel-heading p, #product .panel-heading p, #history .panel-heading p, #knowledge .panel-heading p, #propaganda .panel-heading p {
+    text-align: center;
+}
+
+#brand .panel-heading p, #skin .panel-heading p, #cooperation .panel-heading p, #product .panel-heading p, #history .panel-heading p, #knowledge .panel-heading p, #propaganda .panel-heading p {
+    font-family: "ARIAL";
+}
+
+.panel {
+    box-shadow: none;
+}
+
+.panel-heading, .panel-body {
+    border: none;
+}
+
+#banner_control_left {
+    width: 100%;
+    height: 100%;
+    background: url("../res/img/home/banner/left.png") no-repeat 100%;
+}
+
+#banner_control_left:hover {
+    background: url("../res/img/home/banner/left2.png") no-repeat 100%;
+}
+
+#banner_control_right {
+    width: 100%;
+    height: 100%;
+    background: url("../res/img/home/banner/right.png") no-repeat 100%;
+    background-position-x: 0;
+}
+
+#banner_control_right:hover {
+    background: url("../res/img/home/banner/right2.png") no-repeat 100%;
+    background-position-x: 0;
+}
+
+#brand {
+    margin-top: 20px;
+}
+
+#brand .content {
+    height: auto;
+    background-color: #00a0e9;
+    color: white;
+}
+
+#brand .jumbotron {
+    background-color: rgba(255, 255, 255, 0);
+    min-height: 260px;
+    max-height: 260px;
+    overflow: hidden;
+}
+
+#brand .jumbotron p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+#brand .jumbotron img {
+    display: none;
+}
+
+#brand .col-md-4 {
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    right: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+#brand img {
+    width: 100%;
+    height: 100%;
+}
+
+.border_bottom {
+    width: 20%;
+    margin: 30px 0;
+    border-bottom: 2px solid gainsboro;
+}
+
+#skin .carousel-control {
+    width: 60px;
+}
+
+#skin_control_left {
+    width: 100%;
+    height: 100%;
+    background: url("../res/img/home/skin/left1.png") no-repeat 100%;
+}
+
+#skin_control_right {
+    width: 100%;
+    height: 100%;
+    background: url("../res/img/home/skin/right1.png") no-repeat 100%;
+    background-position-x: 0;
+}
+
+#skin .carousel-control {
+    width: 60px;
+}
+
+#skin_control_left:hover {
+    background: url("../res/img/home/skin/left.png") no-repeat 100%;
+}
+
+#skin_control_right:hover {
+    background: url("../res/img/home/skin/right.png") no-repeat 100%;
+    background-position-x: 0;
+}
+
+#skin .thumbnail {
+    min-height: 360px;
+    border: none;
+}
+
+#skin .thumbnail img {
+    display: block;
+    width: 50%;
+    border-radius: 50%;
+}
+
+#skin .thumbnail h3 {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+#skin .thumbnail p {
+    font-size: 0.9rem;
+}
+
+#cooperation {
+    position: relative;
+}
+
+#cooperation .panel {
+    height: 350px;
+}
+
+#cooperation .panel-body {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+}
+
+#cooperation .row {
+    margin: 0;
+}
+
+#cooperation .col-md-6 {
+    padding: 0;
+}
+
+#cooperation .jumbotron {
+    background-color: rgba(255, 255, 255, 0);
+    padding-bottom: 0;
+}
+
+#cooperation .jumbotron h3, #cooperation .jumbotron h6 {
+    text-align: center;
+    color: #8c8c8c;
+}
+
+#cooperation .jumbotron p {
+    font-size: 1rem;
+}
+
+#cooperation button {
+    background-color: #00a0e9;
+}
+
+#cooperation img {
+    width: 100%;
+}
+
+#cooperation .background {
+    width: 100%;
+    height: 320px;
+    position: absolute;
+    z-index: 0;
+    bottom: -100px;
+    left: 0;
+    background-color: #00a0e9;
+}
+
+#product {
+    margin-top: 120px;
+}
+
+#product .thumbnail, #knowledge .thumbnail {
+    border: none;
+    overflow: hidden;
+}
+
+#product .thumbnail h3, #product .thumbnail p {
+    text-align: center;
+}
+
+#product img {
+    width: 100%;
+}
+
+#product img:hover {
+    transform: scale(1.1);
+}
+
+#product .thumbnail h3 {
+    font-size: 1.2rem;
+}
+
+#product .thumbnail p {
+    font-size: 1rem;
+}
+
+#product .jumbotron {
+    padding: 10px;
+    background-color: #00a0e9;
+    color: white;
+    min-height: 360px;
+    border-radius: 0;
+}
+
+#product .jumbotron h6 {
+    font-size: 10px;
+}
+
+#product .jumbotron p1 {
+    display: inline-block;
+    padding-top: 15px;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+#product .jumbotron p2 {
+    display: inline-block;
+    padding-top: 15px;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+#product button {
+    display: none;
+    margin-top: 25px;
+}
+
+#history .panel-body {
+    padding: 0;
+    background-color: #2aabd2;
+    height: 270px;
+}
+
+#history .jumbotron {
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 50px 0 0 0;
+}
+
+#history .jumbotron h3 {
+    font-size: 1.4rem;
+}
+
+#history .jumbotron p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+#history .history_img {
+    position: relative;
+    top: 50px;
+    left: -80px;
+    padding: 0;
+}
+
+#history #history_img {
+    width: 100%;
+}
+
+#knowledge {
+    padding-top: 60px;
+}
+
+#knowledge .jumbotron {
+    color: #8c8c8c;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px;
+}
+
+#knowledge .jumbotron h3 {
+    font-size: 1.4rem;
+}
+
+#knowledge .jumbotron p {
+    margin-top: 20px;
+    line-height: 25px;
+    font-size: 1rem;
+}
+
+#knowledge img {
+    width: 100%;
+}
+
+#knowledge ul {
+    list-style: none;
+    padding: 0 0 0 10px;
+}
+
+#knowledge #news ul li {
+    display: block;
+    line-height: 50px;
+    font-size: 1rem;
+    color: #8c8c8c;
+    cursor: pointer;
+}
+
+#knowledge #news ul li:hover {
+    text-indent: -1.5rem;
+    font-size: 1.1rem;
+    color: #00a0e9;
+}
+
+#propaganda .row {
+    margin: 0;
+}
+
+#propaganda .col-md-12 {
+    padding: 0;
+}
+
+#propaganda .panel-body {
+    position: relative;
+}
+
+#propaganda .video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    background: url("../res/img/home/propaganda/video.png") no-repeat 100%;
+    background-position-x: 50%;
+}
+
+#propaganda img {
+    width: 100%;
+}
+
+footer {
+    background-color: gainsboro;
+}
+
+footer address {
+    float: left;
+    margin-right: 30px;
+}
+
+footer address #telephone {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    background: url('../res/img/home/footer/telephone.png') no-repeat 100%;
+    float: left;
+}
+
+footer address #qq {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    background: url('../res/img/home/footer/qq.png') no-repeat 100%;
+    float: left;
+}
+
+footer address #wechat1 {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    background: url('../res/img/home/footer/wechat.png') no-repeat 100%;
+    float: left;
+}
+
+footer address #telephone:hover {
+    background: url('../res/img/suspend/telephone2.png') no-repeat 100%;
+}
+
+footer address #qq:hover {
+    background: url('../res/img/suspend/QQ2.png') no-repeat 100%;
+}
+
+footer address #wechat1:hover {
+    background: url('../res/img/suspend/wechat2.png') no-repeat 100%;
+}
+
+footer p {
+    text-align: center;
+}
+
+button {
+    border-radius: 0 !important;
+}
+
+.btn:hover {
+    background-color: #00a0e9;
+    color: white;
+    border: none;
+}
+
+#product button:hover {
+    background-color: white;
+    border: none;
+    color: #00a0e9;
+}
+
+.shade {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+nav {
+    text-align: center;
+}
+
+.pagination li a {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.pagination .active a,
+.pagination li a:hover {
+    background-color: #00a0e9;
+    border: none;
+    color: white;
+}
+
+.pagination > li:last-child > a, .pagination > li:last-child > span {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 10px;
+    }
+
+    #brand .jumbotron {
+        padding: 0 20px 0 10px;
+        min-height: 110px;
+        max-height: 110px;
+        margin-bottom: 20px;
+    }
+
+    #brand .jumbotron h3 {
+        font-size: 1.6rem;
+        line-height: 18px;
+        height: 18px;
+        overflow: hidden;
+    }
+
+    #brand .jumbotron h6 {
+        font-size: 1.2rem;
+        line-height: 14px;
+        height: 14px;
+        overflow: hidden;
+    }
+
+    #brand .jumbotron p {
+        font-size: 1.4rem;
+        line-height: 16px;
+        height: 16px;
+        overflow: hidden;
+    }
+
+    #brand .jumbotron .border_bottom {
+        margin-top: 10px;
+        background-color: white;
+    }
+
+    #brand .col-xs-4 {
+        right: 15px;
+    }
+
+    #cooperation .panel {
+        height: 100px;
+    }
+
+    #cooperation .panel-body {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    #cooperation .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    #cooperation .col-md-6 {
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 100%;
+    }
+
+    #cooperation .jumbotron {
+        padding: 0;
+        height: 70px;
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+
+    #cooperation .jumbotron h3 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        font-size: 1.4rem;
+        line-height: 16px;
+        height: 16px;
+        overflow: hidden;
+    }
+
+    #cooperation .jumbotron h6 {
+        font-size: 1rem;
+        padding: 0;
+        line-height: 12px;
+        height: 12px;
+        overflow: hidden;
+    }
+
+    #cooperation .jumbotron p {
+        padding: 0;
+        font-size: 1.2rem;
+        line-height: 14px;
+        height: 14px;
+        overflow: hidden;
+    }
+
+    #cooperation .background {
+        height: 80px;
+        bottom: -30px;
+    }
+
+    #product {
+        margin-top: 30px;
+    }
+
+    #product .jumbotron {
+        padding: 10px;
+        min-height: 220px;
+    }
+
+    #product .jumbotron h4 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    #product .border_bottom {
+        margin: 10px 0;
+    }
+
+    #product .jumbotron h6 {
+        padding-top: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    #product .jumbotron p1 {
+        padding-top: 15px;
+    }
+
+    #product .jumbotron p2 {
+        display: none;
+    }
+
+    #history .panel-body {
+        margin-left: 15px;
+        margin-right: 15px;
+        height: 90px;
+    }
+
+    #history .row {
+        position: relative;
+    }
+
+    #history .history_img {
+        top: 20px;
+        left: -20px;
+    }
+
+    #history .col-xs-7 {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    #history .jumbotron {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+
+    #history .jumbotron h3 {
+        margin-top: 10px;
+        font-size: 1.6rem;
+        line-height: 18px;
+        height: 18px;
+        overflow: hidden;
+    }
+
+    #history .jumbotron p {
+        line-height: 1.2rem;
+        line-height: 14px;
+        height: 28px;
+        overflow: hidden;
+    }
+
+    #history .border_bottom {
+        display: none;
+    }
+
+    #knowledge .panel {
+        margin-bottom: 0;
+    }
+
+    #knowledge .jumbotron {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    #knowledge .jumbotron h3 {
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 1.4rem;
+        line-height: 16px;
+        height: 16px;
+        overflow: hidden;
+    }
+
+    #knowledge .jumbotron p {
+        margin-top: 5px;
+        font-size: 1rem;
+        line-height: 16px;
+        height: 64px;
+        overflow: hidden;
+    }
+
+    #knowledge button {
+        margin-bottom: 50px;
+    }
+
+    #propaganda .video {
+        background: url("../res/img/home/propaganda/video-xs.png") no-repeat 100%;
+        background-position-x: 50%;
+    }
+
+    footer .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    footer h3 {
+        font-size: 1.6rem;
+    }
+
+    footer address {
+        font-size: 1.4rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+        text-align: left;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    html {
+        font-size: 10px;
+    }
+
+    #brand .col-md-4 {
+        right: 15px;
+    }
+    .jumbotron {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    #brand .jumbotron {
+        min-height: 220px;
+        max-height: 220px;
+    }
+    #cooperation.row{
+        margin: 0;
+    }
+    #cooperation .jumbotron{
+        padding: 0 30px;
+        margin-bottom: 0;
+    }
+    #cooperation .jumbotron h3{
+        line-height: 24px;
+        height: 24px;
+        overflow: hidden;
+    }
+    #cooperation .background{
+        height: 220px;
+        bottom: 0;
+    }
+    #product .jumbotron{
+        padding: 20px 30px;
+    }
+    #history.row{
+        margin: 0;
+    }
+    #history .panel-body{
+        height: 180px;
+    }
+    #history .col-sm-7{
+        position: absolute;
+        right: 0;
+    }
+    #history .jumbotron{
+        padding: 0 15px;
+        margin-bottom: 0;
+    }
+    #history .history_img {
+        top: 30px;
+        left: -50px;
+    }
+    #propaganda.row{
+        margin: 30px 0;
+    }
+    footer .row{
+        margin: 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1240px) {
+    #brand .col-md-4{
+        right: 15px;
+    }
+    #cooperation.row{
+        margin: 0;
+    }
+    #cooperation .jumbotron{
+        padding-top: 24px;
+    }
+    #history.row{
+        margin: 0;
+    }
+    #history .history_img {
+        left: -70px;
+    }
+    #history .jumbotron{
+        padding-top: 24px;
+    }
+    #knowledge #news ul li {
+        line-height: 45px;
+    }
+    #propaganda.row{
+        margin: 0;
+    }
+    footer .row{
+        margin: 0;
+    }
+}

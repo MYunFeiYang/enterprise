@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>魅诗肌</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="魅诗肌、祛痘、敏感、痘痘肌肤、敏感肌肤、痘痘、黑头、粉刺、激素脸、游叮叮、大油田、水油失衡、问题肌肤">
+    <meta name="description" content="魅诗肌、祛痘、敏感、痘痘肌肤、敏感肌肤、痘痘、黑头、粉刺、激素脸、游叮叮、大油田、水油失衡、问题肌肤">
+    <!--stylesheet-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!--javascript-->
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="modal fade" id="loading" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="res/loading/loading2.gif">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="skin_history_details" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="wechat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <img src="res/img/suspend/suspend.png" style="width: 100%;height:100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand hidden-sm hidden-lg hidden-md" href="#">
+                        <img src="res/img/back.png" onClick="javascript :history.back(-1)"
+                             style="height: 30px;margin-top: 10px">
+                    </a>
+                    <a class="navbar-brand" href="#">
+                        <img src="res/img/logo.png" style="height: 50px">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="home.html" target="mainframe">首页</a></li>
+                        <li><a href="product.html" target="mainframe">产品</a></li>
+                        <li><a href="brand.html" target="mainframe">品牌介绍</a></li>
+                        <li><a href="skin.html" target="mainframe">皮肤问题</a></li>
+                        <li><a href="cooperation.html" target="mainframe">合作伙伴</a></li>
+                        <li><a href="knowledge.html" target="mainframe">知识科普</a></li>
+                        <li><a href="contactUs.html" target="mainframe">联系我们</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+    <main>
+        <div class="btn-group-vertical" role="group" id="suspend">
+            <button type="button" class="btn btn-default qq" id="qq_btn" onclick="QQ()">
+            </button>
+            <button type="button" class="btn btn-default wechat" id="wechat_btn"
+                    onclick="wechat();$('#wechat').modal('show')">
+            </button>
+            <button type="button" class="btn btn-default telephone" id="telephone_btn" onclick="telephone()">
+            </button>
+            <a onclick="document.getElementById('mainframe').contentWindow.scrollTo(0, 0);"
+               class="btn btn-default toTop hidden-xs"></a>
+        </div>
+        <ul id="qq_con">
+            <li class="li1">在线咨询
+                <img src="res/img/suspend/close.png" id="qq_close" onclick="hidden_QQ(this)">
+            </li>
+            <li class="li2">
+                <img src="res/img/suspend/QQ.png">
+                <h2>2485052805</h2>
+            </li>
+            <li class="li3">
+                <img src="res/img/suspend/telephone.png" style="float: left;margin-left: -5px">
+                <h4 style="float: left">联系电话</h4>
+                <h3>020-28178401</h3>
+            </li>
+        </ul>
+        <ul id="telephone_con">
+            <li class="li1">联系电话
+                <img src="res/img/suspend/close.png" id="telephone_close" onclick="hidden_telephone(this)"></li>
+            <li class="li2">
+                <img src="res/img/suspend/telephone.png">
+                <h3>联系电话</h3>
+                <h2>020-28178401</h2>
+            </li>
+            <li class="li3">
+                <img src="res/img/suspend/QQ.png" style="margin-top: -5px;margin-left: -10px">
+                <h3>2485052805</h3>
+            </li>
+        </ul>
+        <div class="warp">
+            <iframe src="home.html" frameborder="0" name="mainframe" id="mainframe">
+
+            </iframe>
+        </div>
+    </main>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        $('#loading').modal({"backdrop": "static"}).modal('show').on("shown.bs.modal", function () {
+            // 是弹出框居中。。。
+            var $modal_dialog = $(this).find('.modal-dialog');
+            //获取可视窗口的高度
+            var clientHeight = (document.body.clientHeight < document.documentElement.clientHeight) ? document.body.clientHeight : document.documentElement.clientHeight;
+            //得到dialog的高度
+            var dialogHeight = $modal_dialog.height();
+            //计算出距离顶部的高度
+            var m_top = (clientHeight - dialogHeight) / 2;
+            $modal_dialog.css({'margin': m_top + 'px auto'});
+        });
+        $('#wechat').on("shown.bs.modal", function () {
+            // 是弹出框居中。。。
+            var $modal_dialog = $(this).find('.modal-dialog');
+            //获取可视窗口的高度
+            var clientHeight = (document.body.clientHeight < document.documentElement.clientHeight) ? document.body.clientHeight : document.documentElement.clientHeight;
+            //得到dialog的高度
+            var dialogHeight = $modal_dialog.height();
+            //计算出距离顶部的高度
+            var m_top = (clientHeight - dialogHeight) / 2;
+            $modal_dialog.css({'margin': m_top + 'px auto'});
+        });
+        $('#wechat').on('hidden.bs.modal', function (e) {
+            wechat_close();
+        });
+        $('#video').on('shown.bs.modal', function (e) {
+            $("#video video:first").attr("src", "res/video/video.mp4");
+        });
+        $('#video').on('hidden.bs.modal', function (e) {
+            $("#video video:first").attr("src", "");
+        });
+    });
+    $(".navbar-default .navbar-nav li").each(function () {
+        $(this).click(function () {
+            $(this).parent().find("li").removeClass("active");
+            $(this).addClass("active");
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--stylesheet-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/productDetail.css">
+    <!--javascript-->
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/productDetail.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid">
+    <main>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
+                <ol class="breadcrumb">
+                    <li><a href="#" onclick="window.parent.$('#mainframe').attr('src','home.html')">首页</a></li>
+                    <li><a href="#" onclick="window.parent.$('#mainframe').attr('src','product.html')">产品</a></li>
+                    <li class="active">氨基酸柔肤卸妆液</li>
+                </ol>
+                <div class="row" id="head">
+                    <div class="col-md-5 col-sm-5">
+                        <div class="thumbnail">
+                            <img>
+                            <div class="caption">
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-3">
+                                        <img>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-7">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 style="font-weight: bold"></h3>
+                                <h4 class="dodgerblue"></h4>
+                                <div class="border_bottom"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：</label>
+                                <p class="dodgerblue"></p>
+                            </div>
+                        </div>
+                        <div class="hidden-xs">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>规&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：</label>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>商品评分：</label>
+                                    <img style="width: 20px;height:20px;" src="res/img/product/detail/star.png">
+                                    <img style="width: 20px;height:20px;" src="res/img/product/detail/star.png">
+                                    <img style="width: 20px;height:20px;" src="res/img/product/detail/star.png">
+                                    <img style="width: 20px;height:20px;" src="res/img/product/detail/star.png">
+                                    <img style="width: 20px;height:20px;" src="res/img/product/detail/star.png">
+                                </div>
+                            </div>
+                            <div class="border_bottom"></div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-3">
+                                    <img src="res/img/product/detail/二维码.png">
+                                </div>
+                            </div>
+                            <span class="dodgerblue">（产品为专业产品，购买前请扫描二维码咨询客服了解皮肤状况再进行购买）</span>
+                            <div class="row">
+                                <div class="col-md-3 col-sm-4">
+                                    <img style="width: 10px;height:10px;" src="res/img/product/detail/checked.png">
+                                    <span>100%官方正品</span>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <img style="width: 10px;height:10px;" src="res/img/product/detail/checked.png">
+                                    <span>多种优惠活动</span>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <img style="width: 10px;height:10px;" src="res/img/product/detail/checked.png">
+                                    <span>专业人员搭配</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-3">
+                                    <label style="margin-top: 10px">购买数量：</label>
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <div class="input-group input-group-sm">
+                                        <span class="input-group-addon">-</span>
+                                        <input type="text" class="form-control" value="1"
+                                               aria-label="Amount (to the nearest dollar)">
+                                        <span class="input-group-addon">+</span>
+                                    </div>
+                                </div>
+                                <span>（当前库存：<span class="dodgerblue">9999+</span>件）</span>
+                            </div>
+                        </div>
+                        <div class="row buy">
+                            <div class="col-md-3 col-xs-6">
+                                <button class="btn btn-default btn-lg dodgerblue" onclick="window.parent.$('#wechat').modal('show')">立即购买</button>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <a class="btn btn-default btn-lg dodgerblue" href='http://mp.weixin.qq.com/bizmall/mallshelf?id=&t=mall/list&biz=MzIyNzY4NTk5MQ==&shelf_id=2&showwxpaytitle=1#wechat_redirect' target="_blank">微店购买</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="main">
+                    <div class="row" style="margin: 0">
+                        <div class="col-md-12 hidden-xs" id="parameter">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <label>产品名称：</label>
+                                    <p></p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <label>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：</label>
+                                    <p></p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <label>规&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：</label>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <label>适合肤质：</label>
+                                    <p></p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <label>产品特性：</label>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12">
+                                    <label>产品功效：</label>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12">
+                                    <label>产品特色：</label>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12">
+                                    <label>使用方法：</label>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-sm-9">
+                        <div class="row hidden-md hidden-lg hidden-sm" style="margin-left: 0;margin-right: 0">
+                            <div>
+                                <div class="col-xs-6">
+                                    <button class="btn btn-active">商品详情</button>
+                                </div>
+                                <div class="col-xs-6">
+                                    <button class="btn">产品参数</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row hidden-xs" style="margin-bottom: 20px;padding: 0;">
+                                    <div class="col-md-2 col-sm-3" style="margin: 0;padding-right: 0">
+                                        <p1>产品详情</p1>
+                                    </div>
+                                    <div class="col-md-10 col-sm-9" style="margin: 0;padding-left: 0">
+                                        <p2></p2>
+                                    </div>
+                                </div>
+                                <img src="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-3 hidden-xs" id="link">
+                        <h3>相关产品</h3>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="thumbnail">
+                                <img>
+                                <div class="caption">
+                                    <h6></h6>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="hidden-xs">
+        <address>
+            <p>广州魅诗肌生物科技有限公司&nbsp;郑重声明:未经授权，禁止转载，网页图文均属官方所有，否则追究法律责任 &nbsp;粤ICP备17035173号&nbsp;020-28178401</p>
+        </address>
+    </footer>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        var src=window.parent.$("#mainframe").attr("src");
+        var i=parseInt(src.split("=")[1]);
+        initproductDetail(i);
+        $("#main button").each(function (index) {
+            $(this).click(function () {
+                $(this).parents(".row:first").find("button").removeClass("btn-active");
+                $(this).addClass("btn-active");
+                if (index==0){
+                    $("#main .col-md-12:first").addClass("hidden-xs");
+                    $("#main img:first").removeClass("hidden-xs");
+                }else {
+                    $("#main img:first").addClass("hidden-xs");
+                    $("#main .col-md-12:first").removeClass("hidden-xs");
+                }
+            });
+        })
+    });
+</script>
+</html>

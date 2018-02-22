@@ -1,0 +1,380 @@
+
+html, body ,main{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+html {
+    overflow-x: hidden;
+    font-size: 14px;
+}
+* {
+    font-family: "Microsoft YaHei";
+}
+.container-fluid {
+    padding: 0;
+    height: 100%;
+}
+
+.navbar {
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar-default {
+    background-color: white;
+    border: none;
+}
+
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-default .navbar-nav .active a,
+.navbar-default .navbar-nav .active a:focus,
+.navbar-default .navbar-nav li a:hover,
+.navbar-default .navbar-nav li a:focus {
+    background-color: white;
+    border-bottom: 2px solid #00a0e9;
+}
+
+.navbar .navbar-header img {
+    margin-left: 40px;
+}
+
+.navbar .navbar-collapse ul {
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.modal-backdrop {
+    background-color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#loading .modal-dialog {
+    width: 150px;
+    height: 150px;
+}
+
+#loading .modal-content {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    box-shadow: none;
+}
+
+#loading .modal-body {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#loading img {
+    width: 100%;
+    position: absolute;
+    z-index: 99999;
+}
+
+#skin_history_details img {
+    width: 100%;
+}
+
+#skin_history_details h3 {
+    color: black;
+    font-size: 1.4rem;
+}
+
+#skin_history_details p {
+    color: #8c8c8c;
+    font-size: 1rem;
+    text-indent: 2rem;
+}
+
+#suspend {
+    list-style-type: none;
+    position: fixed;
+    z-index: 1;
+    right: 30px;
+    bottom: 50px;
+}
+
+#suspend button, #suspend a {
+    width: 50px;
+    height: 50px;
+    border: 1px solid gainsboro;
+}
+
+#suspend .qq {
+    background: url(../res/img/suspend/QQ1.png) no-repeat center;
+}
+
+#suspend .wechat {
+    background: url(../res/img/suspend/wechat.png) no-repeat center;
+}
+
+#suspend .telephone {
+    background: url(../res/img/suspend/telephone1.png) no-repeat center;
+}
+
+#suspend .toTop {
+    background: url(../res/img/suspend/toTop2.png) no-repeat center;
+    background-color: #8c8c8c;
+}
+
+#suspend .qq:hover {
+    background: url(../res/img/suspend/QQ2.png) no-repeat center;
+}
+
+#suspend .wechat:hover {
+    background: url(../res/img/suspend/wechat2.png) no-repeat center;
+}
+
+#suspend .telephone:hover {
+    background: url(../res/img/suspend/telephone2.png) no-repeat center;
+}
+
+#suspend .toTop:hover {
+    background-color: #00a0e9;
+}
+
+#video .modal-dialog {
+    width: 60%;
+}
+
+#video video {
+    width: 100%;
+}
+
+main ul {
+    list-style-type: none;
+    display: none;
+    width: auto;
+    padding: 0;
+    background-color: white;
+    position: fixed;
+    top: 150px;
+    right: 0;
+    z-index: 999;
+}
+
+main ul li {
+    width: 270px;
+    border-bottom: 1px solid gainsboro;
+}
+
+main ul li img, main ul li h3, main ul li h2 {
+    display: inline-block;
+}
+
+main ul li img {
+    width: 30px;
+    height: 30px;
+}
+
+main ul .li1 {
+    background-color: #00a0e9;
+    padding: 30px;
+    font-size: 30px;
+    color: white;
+}
+
+main ul .li1 img {
+    float: right;
+}
+
+main ul .li2 {
+    padding: 10px 30px;
+}
+
+main ul .li2 img {
+    margin-top: -10px;
+}
+
+main ul .li3 {
+    padding: 10px 30px;
+}
+
+main ul .li3 img {
+    margin-left: 15px;
+}
+
+#skin_history_details {
+    height: 99%;
+    overflow-y: auto;
+}
+
+#wechat .modal-dialog {
+    width: 300px;
+    height: 300px;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+#wechat_con {
+    display: none;
+    position: relative;
+    z-index: 999;
+    margin-top: 200px;
+}
+
+#wechat_close {
+    position: relative;
+    z-index: 999;
+}
+
+.warp {
+    margin-top: -50px;
+    width: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    overflow-y: scroll;
+}
+#mainframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    body::-webkit-scrollbar,
+    .warp::-webkit-scrollbar{
+        width: 0;
+    }
+    .navbar .navbar-brand:last-child {
+        position: absolute;
+        left: 50%;
+        margin-left: -98.33px;
+    }
+
+    .navbar .navbar-header img {
+        margin-left: 20px;
+    }
+
+    .navbar .navbar-brand:last-child img {
+        margin-left: 0;
+    }
+
+    .navbar .navbar-header button {
+        margin-right: 20px;
+    }
+
+    .navbar .navbar-collapse ul {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    #suspend {
+        display: block;
+        width: 210px;
+        bottom: 30px;
+        left: 50%;
+        background-color: rgba(236, 236, 236, 0.5);
+        margin-left: -115px;
+        border-radius: 25px;
+        overflow: hidden;
+    }
+
+    #suspend button, #suspend a {
+        float: left;
+        border: none;
+        width: 70px;
+        outline: none;
+    }
+
+    #suspend .qq {
+        background: url(../res/img/suspend/QQ2.png) no-repeat center;
+    }
+
+    #suspend .wechat {
+        background: url(../res/img/suspend/wechat2.png) no-repeat center;
+    }
+
+    #suspend .telephone {
+        background: url(../res/img/suspend/telephone2.png) no-repeat center;
+    }
+
+    main ul li {
+        width: 200px;
+    }
+
+    main ul .li1 {
+        background-color: #00a0e9;
+        padding: 20px;
+        font-size: 20px;
+        color: white;
+    }
+
+    main ul li img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3, h4 {
+        font-size: 16px;
+    }
+
+    #video .modal-dialog {
+        width: 100%;
+    }
+
+    #wechat .modal-dialog {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    html{
+        font-size: 10px;
+    }
+    body::-webkit-scrollbar,
+    .warp::-webkit-scrollbar{
+        width: 0;
+    }
+    .navbar-brand{
+        padding-left: 0;
+    }
+    .navbar-collapse {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .navbar .navbar-collapse ul {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1240px) {
+    body,
+    .warp{
+        overflow-y: hidden;
+    }
+}
+
+@media (min-width: 1240px) {
+    html {
+        font-size: 20px;
+    }
+    body,
+    .warp{
+        overflow-y: hidden;
+    }
+    #brand .jumbotron {
+        min-height: 360px;
+        max-height: 400px;
+    }
+}

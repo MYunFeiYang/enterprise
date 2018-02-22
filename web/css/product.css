@@ -1,0 +1,141 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+html {
+    overflow-x: hidden;
+    font-size: 14px;
+}
+*{
+    font-family: "Microsoft YaHei";
+}
+header {
+    margin-bottom: 30px;
+    position: relative;
+}
+header .col-md-12,header .col-md-10{
+    padding: 0;
+}
+img {
+    width: 100%;
+}
+.product_nav {
+    list-style: none;
+    width: 180px;
+    height: auto;
+}
+
+.product_nav li {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.product_nav li a {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    margin: 20px 0;
+    padding-left: 5px;
+    text-decoration: none;
+    color: grey;
+}
+.product_nav li a:hover,
+.product_nav .active a {
+    border-left: 2px solid dodgerblue;
+    padding-left: 20px;
+    color: black;
+}
+
+article .thumbnail {
+    border: none;
+    overflow: hidden;
+}
+article .thumbnail:hover{
+    box-shadow: 1px 1px 5px 5px rgba(128,125,125,0.3);
+}
+
+article .thumbnail img {
+    width:100%;
+    overflow: hidden;
+}
+
+article .thumbnail img:hover {
+    transform: scale(1.1);
+}
+footer{
+    margin-top: 60px;
+}
+footer address p {
+    text-align: center;
+    font-size: 1rem;
+    color: #202020;
+}
+#fixed {
+    position:absolute;
+    z-index: 999;
+    top: 10px;
+}
+nav{
+    text-align: center;
+}
+.pagination .active a{
+    background-color: #00a0e9;
+    border: none;
+}
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+@media (max-width: 767px) {
+    html{
+        font-size: 10px;
+    }
+    header{
+        display: none;
+    }
+    #fixed{
+        background-color: white;
+        position: fixed;
+        top:0;
+    }
+    .pagination{
+        margin-top: 20px;
+    }
+    .pagination li a{
+        padding: 2px 8px;
+        background-color: rgba(255,255,255,0);
+        border: none;
+    }
+    #content{
+        margin-top: 80px;
+    }
+    footer{
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    #title{
+        position: absolute;
+        bottom: 0;
+    }
+}
+@media (min-width:992px) and (max-width:1240px) {
+    #title img{
+        position: absolute;
+        bottom: 0;
+    }
+}
+@media (min-width: 1240px) {
+    #title img{
+        position: absolute;
+        bottom: 0;
+    }
+}

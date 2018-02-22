@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--stylesheet-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/knowledgeDetail.css">
+    <!--javascript-->
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/knowledgeDetail.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div id="detail">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-xs-12 col-sm-12">
+                <div class="row">
+                    <div class="col-md-8 col-sm-7" id="detail_main">
+                        <h3></h3>
+                        <h6></h6>
+                        <p></p>
+                        <img src="">
+                        <h3></h3>
+                        <p></p>
+                        <h3></h3>
+                        <p></p>
+                        <h3></h3>
+                        <p></p>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                    <div class="col-md-4 col-sm-5 hidden-xs" id="detail_link">
+                        <iframe frameborder="0" id="link">
+
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="hidden-xs">
+        <address>
+            <p>广州魅诗肌生物科技有限公司&nbsp;郑重声明:未经授权，禁止转载，网页图文均属官方所有，否则追究法律责任 &nbsp;粤ICP备17035173号&nbsp;020-28178401</p>
+        </address>
+    </footer>
+</div>
+</body>
+<script>
+    window.onload=function () {
+        var src=window.parent.$("#mainframe").attr("src");
+        var i=parseInt(src.split("=")[1]);
+        i=parseInt(i);
+        initDetail(i);
+        $("#link").attr("src","link.html?i="+(i+6));
+    }
+</script>
+</html>

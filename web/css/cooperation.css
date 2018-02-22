@@ -1,0 +1,114 @@
+
+html{
+    font-size: 14px;
+    overflow-x: hidden;
+}
+*{
+    font-family: "Microsoft YaHei";
+}
+.container-fluid{
+    padding: 0;
+}
+.panel-default{
+    border: none;
+}
+header{
+    position: relative;
+}
+img{
+    width: 100%;
+}
+p{
+    text-align: justify;
+}
+#partner2 h3{
+    text-align: center;
+}
+#partner2 p{
+    text-align: center;
+    font-size: 1rem;
+    color: slategray;
+    line-height: 30px;
+}
+#introduce p{
+    font-size: 1rem;
+    color: #8c8c8c;
+}
+#start h6 ,#births h6{
+    font-family: ARIAL;
+    font-size: 2rem;
+    color: #8c8c8c;
+}
+#start p{
+    font-size: 1rem;
+    color: #8c8c8c;
+}
+#births p{
+    font-size: 1rem;
+    color: #8c8c8c;
+}
+footer{
+    margin-top: 180px;
+}
+footer address p{
+    text-align: center;
+}
+@media (max-width: 768px) {
+    html{
+        font-size: 10px;
+    }
+    h3{
+        font-size: 1.6rem;
+    }
+    h6{
+        font-size: 1.2rem;
+    }
+    #introduce p,#start p,#births p{
+        font-size: 1.4rem;
+        line-height: 21px;
+        letter-spacing: 3px;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    #partner1{
+        position: absolute;
+        bottom: 0;
+    }
+    #introduce .panel{
+        box-shadow: none;
+    }
+}
+@media (min-width:992px) and (max-width:1240px) {
+    #partner1{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #partner1 .col-md-10{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #partner1 img{
+        position: absolute;
+        bottom: 0;
+    }
+    #introduce .panel{
+        box-shadow: none;
+    }
+}
+@media (min-width: 1240px) {
+    #partner1{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #partner1 .col-md-10{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #partner1 img{
+        position: absolute;
+        bottom: 0;
+    }
+    #introduce .panel{
+        box-shadow: none;
+    }
+}
