@@ -920,7 +920,7 @@ $(document).ready(function () {
     else {
         $(document).scroll(function (e) {
             var $ScrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
-            if ($ScrollBottom < 20) {
+            if ($ScrollBottom < 50) {
                 onloadCount++;
                 switch (onloadCount) {
                     case 1:
