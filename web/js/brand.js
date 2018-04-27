@@ -57,8 +57,8 @@ function brand() {
                 $(this).html(brand.birth.p[index]);
             });
             //search
-            $("#search h3:first").html(brand.birth.h3);
-            $("#search h6:first").html(brand.birth.h6);
+            $("#search h3:first").html(brand.search.h3);
+            $("#search h6:first").html(brand.search.h6);
             $("#search p").each(function (index) {
                 $(this).html(brand.birth.p[index]);
             });

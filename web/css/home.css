@@ -2,6 +2,8 @@
 html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 * {
@@ -10,11 +12,6 @@ html, body {
 
 html {
     font-size: 14px;
-    overflow-x: hidden;
-}
-
-.container-fluid {
-    padding: 0;
 }
 
 .carousel-control .glyphicon {
@@ -98,6 +95,7 @@ html {
 }
 
 #brand .jumbotron p {
+    text-align: justify;
     margin-top: 10px;
     font-size: 1rem;
 }
@@ -209,6 +207,7 @@ html {
 }
 
 #cooperation .jumbotron p {
+    text-align: justify;
     font-size: 1rem;
 }
 
@@ -337,6 +336,7 @@ html {
 }
 
 #knowledge .jumbotron p {
+    text-align: justify;
     margin-top: 20px;
     line-height: 25px;
     font-size: 1rem;
@@ -365,10 +365,6 @@ html {
     color: #00a0e9;
 }
 
-#propaganda .row {
-    margin: 0;
-}
-
 #propaganda .col-md-12 {
     padding: 0;
 }
@@ -393,6 +389,8 @@ html {
 
 footer {
     background-color: gainsboro;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 footer address {
@@ -529,7 +527,9 @@ nav {
         background-color: white;
     }
 
-    #brand .col-xs-4 {
+    #brand .col-md-4 {
+        height: 64%;
+        top: 18%;
         right: 15px;
     }
 
@@ -645,8 +645,7 @@ nav {
     }
 
     #history .jumbotron {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0 5px;
         margin-bottom: 0;
         overflow: hidden;
     }
@@ -697,19 +696,21 @@ nav {
     }
 
     #knowledge button {
+        margin-top: 20px;
         margin-bottom: 50px;
+        position: relative;
+        z-index: 99999;
+    }
+
+    #propaganda.row, #propaganda.row .row {
+        margin-left: 0;
+        margin-right: 0;
     }
 
     #propaganda .video {
         background: url("../res/img/home/propaganda/video-xs.png") no-repeat 100%;
         background-position-x: 50%;
     }
-
-    footer .row {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
     footer h3 {
         font-size: 1.6rem;
     }
@@ -732,85 +733,111 @@ nav {
     #brand .col-md-4 {
         right: 15px;
     }
+
     .jumbotron {
         padding-top: 24px;
         padding-bottom: 24px;
     }
+
     #brand .jumbotron {
         min-height: 220px;
         max-height: 220px;
     }
-    #cooperation.row{
+
+    #cooperation.row {
         margin: 0;
     }
-    #cooperation .jumbotron{
+
+    #cooperation .jumbotron {
         padding: 0 30px;
         margin-bottom: 0;
     }
-    #cooperation .jumbotron h3{
+
+    #cooperation .jumbotron h3 {
         line-height: 24px;
         height: 24px;
         overflow: hidden;
     }
-    #cooperation .background{
+
+    #cooperation .background {
         height: 220px;
         bottom: 0;
     }
-    #product .jumbotron{
+
+    #product .jumbotron {
         padding: 20px 30px;
     }
-    #history.row{
+
+    #history.row {
         margin: 0;
     }
-    #history .panel-body{
+
+    #history .panel-body {
         height: 180px;
     }
-    #history .col-sm-7{
+
+    #history .col-sm-7 {
         position: absolute;
         right: 0;
     }
-    #history .jumbotron{
+
+    #history .jumbotron {
         padding: 0 15px;
         margin-bottom: 0;
     }
+
     #history .history_img {
         top: 30px;
         left: -50px;
     }
-    #propaganda.row{
+
+    #propaganda.row {
         margin: 30px 0;
     }
-    footer .row{
+}
+
+@media (min-width: 992px) and (max-width: 1720px) {
+    #brand .col-md-4 {
+        right: 15px;
+    }
+
+    #cooperation.row {
+        margin: 0;
+    }
+
+    #cooperation .jumbotron {
+        padding-top: 24px;
+    }
+
+    #history.row {
+        margin: 0;
+    }
+
+    #history .history_img {
+        left: -70px;
+    }
+
+    #history .jumbotron {
+        padding-top: 24px;
+    }
+
+    #knowledge #news ul li {
+        line-height: 45px;
+    }
+
+    #propaganda.row {
         margin: 0;
     }
 }
 
-@media (min-width: 992px) and (max-width: 1240px) {
-    #brand .col-md-4{
-        right: 15px;
+@media (min-width: 1720px) and (max-width: 2400px) {
+    html {
+        font-size: 30px;
     }
-    #cooperation.row{
-        margin: 0;
-    }
-    #cooperation .jumbotron{
-        padding-top: 24px;
-    }
-    #history.row{
-        margin: 0;
-    }
-    #history .history_img {
-        left: -70px;
-    }
-    #history .jumbotron{
-        padding-top: 24px;
-    }
-    #knowledge #news ul li {
-        line-height: 45px;
-    }
-    #propaganda.row{
-        margin: 0;
-    }
-    footer .row{
-        margin: 0;
+}
+
+@media (min-width: 2400px) {
+    html {
+        font-size: 36px;
     }
 }

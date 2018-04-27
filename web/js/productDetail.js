@@ -270,24 +270,27 @@ function initproductDetail(m) {
     }
     productDetail.init();
 }
-
-$(document).scroll(function (e) {
-        if ($(window).width() < 768) {
-            if ($("#main").offset().top - $(window).scrollTop() < 20) {
-                $("#main .col-md-10:first div:first").stop();
-                $("#main .col-md-10:first div:first").css("position", "fixed");
-                $("#main .col-md-10:first div:first").css("top","0");
-                $("#main .col-md-10:first div:first").css("z-index","999");
-                $("#main .col-md-10:first div:first").css("width","100%");
-                $("#main .col-md-10:first div:first").css("padding","0 15px");
-                $("#main .col-md-10:first div:first").css("margin-left","-15px");
+$(document).ready(function () {
+    if (/iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase())) {
+        setInterval('mounting()', 0);
+    }else {
+        $(document).scroll(function (e) {
+            if ($(window).width() < 768) {
+                mounting();
             }
-            else {
-                $("#main .col-md-10:first div:first").stop();
-                $("#main .col-md-10:first div:first").css("position", "static");
-                $("#main .col-md-10:first div:first").css("padding","0");
-                $("#main .col-md-10:first div:first").css("margin-left","0")
-            }
-        }
+        });
     }
-);
+});
+function mounting() {
+    //alert($("#main").offset().top - $(window).scrollTop() < 250);
+    if ($("#main").offset().top - $(window).scrollTop() < 250) {
+        $("#main .col-md-10:first").stop();
+        $("#main .col-md-10:first").css("position", "fixed");
+        $("#main .col-md-10:first").css("top", "0");
+        $("#main .col-md-10:first").css("z-index", "999");
+    }
+    else {
+        $("#main .col-md-10:first").stop();
+        $("#main .col-md-10:first").css("position", "static");
+    }
+}

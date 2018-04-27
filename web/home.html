@@ -15,7 +15,13 @@
 </head>
 <body>
 <div class="container-fluid">
-    <!-- Modal -->
+    <div id="suspend" style="position: fixed;bottom: 250px;left: 0;z-index: 99999">
+        <div class="row hidden-sm hidden-xs">
+            <div class="col-md-1 col-lg-1" style="width: 200px">
+                <img src="res/img/home/product/suspend.png" style="width: 100%">
+            </div>
+        </div>
+    </div>
     <main>
         <div class="row" id="banner">
             <div class="col-md-12">
@@ -41,6 +47,12 @@
 
                             </div>
                         </div>
+                        <div class="item">
+                            <img src="" width="100%">
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Controls -->
@@ -56,38 +68,388 @@
             </div>
         </div>
         <div class="row" id="brand">
-        </div>
-        <div class="row" id="skin">
-        </div>
-        <div class="row" id="cooperation">
-        </div>
-        <div class="row" id="product" style="position: relative">
-            <div class="row hidden-sm hidden-xs">
-                <div class="col-md-1 col-lg-1">
-                    <img src="res/img/home/product/suspend.png" style="position: absolute;top: 100px;left: 30px">
+            <div class="col-md-12 col-lg-10 col-lg-offset-1 col-xs-12 col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="center-block">
+                            <h3 class="panel-title">品牌介绍</h3>
+                            <p>——BRAND——</p>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="position: relative">
+                        <div class="row" onclick="window.parent.$('#mainframe').attr('src','brand.html')">
+                            <div class="col-md-9 col-xs-9 col-sm-9">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-md-9 col-md-offset-1 col-sm-11 col-xs-11">
+                                            <div class="jumbotron">
+                                                <h3></h3>
+                                                <h6></h6>
+                                                <p></p>
+                                                <div class='border_bottom'></div>
+                                                <div class="col-md-3">
+                                                    <img src='res/img/home/箭头.png' style='margin-left:-12px'>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xs-4 col-sm-4">
+                                <div class='shade'></div>
+                                <img>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row" id="history">
+        <div class="row" id="skin">
+            <div class="col-md-12 col-lg-10 col-lg-offset-1 col-xs-12 col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="center-block">
+                            <h3 class="panel-title">皮肤问题</h3>
+                            <p>——SKIN PROBLEMS——</p>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="thumbnail">
+                                                <img onclick="skin_problem_link('0')">
+                                                <div class="caption">
+                                                    <h3></h3>
+                                                    <p></p>
+                                                    <button class="btn btn-default center-block" role="button"
+                                                            onclick="skin_problem_link('0')">了解更多
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="thumbnail">
+                                                <img onclick="skin_problem_link('1')">
+                                                <div class="caption">
+                                                    <h3></h3>
+                                                    <p></p>
+                                                    <button class="btn btn-default center-block" role="button"
+                                                            onclick="skin_problem_link('1')">了解更多
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="thumbnail">
+                                                <img onclick="skin_problem_link('2')">
+                                                <div class="caption">
+                                                    <h3></h3>
+                                                    <p></p>
+                                                    <button class="btn btn-default center-block" role="button"
+                                                            onclick="skin_problem_link('2')">了解更多
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="thumbnail">
+                                                <img onclick="skin_problem_link('3')">
+                                                <div class="caption">
+                                                    <h3></h3>
+                                                    <p></p>
+                                                    <button class="btn btn-default center-block" role="button"
+                                                            onclick="skin_problem_link('3')">了解更多
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="thumbnail">
+                                                <img onclick="skin_problem_link('4')">
+                                                <div class="caption">
+                                                    <h3></h3>
+                                                    <p></p>
+                                                    <button class="btn btn-default center-block" role="button"
+                                                            onclick="skin_problem_link('4')">了解更多
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="thumbnail">
+                                                <img onclick="skin_problem_link('5')">
+                                                <div class="caption">
+                                                    <h3></h3>
+                                                    <p></p>
+                                                    <button class="btn btn-default center-block" role="button"
+                                                            onclick="skin_problem_link('5')">了解更多
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                               data-slide="prev">
+                                <div id="skin_control_left"></div>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                               data-slide="next">
+                                <div id="skin_control_right"></div>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row" id="knowledge">
+        <div class="row hidden" id="cooperation">
+            <div class="col-md-12 col-lg-10 col-lg-offset-1 col-xs-12 col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="center-block">
+                            <h3 class="panel-title">合作伙伴</h3>
+                            <p>——COOPERATION——</p>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row" onclick="window.parent.$('#mainframe').attr('src','cooperation.html')">
+                            <div class="col-md-6 col-xs-6 col-sm-6">
+                                <div class='shade'></div>
+                                <img>
+                            </div>
+                            <div class="col-md-6 col-xs-6 col-sm-6">
+                                <div class="jumbotron">
+                                    <h3></h3>
+                                    <h6></h6>
+                                    <p></p>
+                                    <button class="btn btn-sm center-block" style='display: none;border: none'
+                                            role="button"
+                                            onclick="window.parent.$('#mainframe').attr('src','cooperation.html')">了解更多
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="background">
+
+            </div>
         </div>
-        <div class="row" id="propaganda">
+        <div class="row hidden" id="product">
+            <div class="col-md-12 col-lg-10 col-lg-offset-1  col-xs-12 col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="center-block">
+                            <h3 class="panel-title">产品</h3>
+                            <p>——PRODUCT——</p>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <button class="btn btn-primary">基础系列</button>
+                        </div>
+                        <div class="row" id="step1">
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-primary">祛痘系列</button>
+                        </div>
+                        <div class="row" id="step2">
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-primary">改善系列</button>
+                        </div>
+                        <div class="row" id="step3">
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-primary">精选套装</button>
+                        </div>
+                        <div class="row" id="step4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="background">
+            </div>
+        </div>
+        <div class="row hidden" id="history">
+            <div class="col-lg-9 col-lg-offset-2 col-md-11 col-md-offset-1 col-sm-11 col-xs-offset-1 col-sm-11 col-sm-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="center-block">
+                            <h3 class="panel-title">护肤历史</h3>
+                            <p>——PROPAGANDA——</p>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-6  col-sm-6 col-xs-6 history_img"
+                                 onclick="window.parent.$('#skin_history_details').modal('show')">
+                                <div class='shade'></div>
+                                <img id='history_img'>
+                            </div>
+                            <div class="col-md-5  col-sm-7 col-xs-7 ">
+                                <div class="jumbotron">
+                                    <h3></h3>
+                                    <p></p>
+                                    <div class='border_bottom'></div>
+                                    <div class="col-md-3">
+                                        <img src='res/img/home/箭头.png' style='display: none;margin-left: -12px'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row hidden" id="knowledge">
+            <div class="col-md-12 col-lg-10 col-lg-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="center-block">
+                            <h3 class="panel-title">科普知识</h3>
+                            <p>——KNOWLEDGE——</p>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <nav aria-label="...">
+                                    <ul class="pagination">
+                                        <li class="active" onclick="initKnowledge()"><a>全部</a></li>
+                                        <li onclick="knowledge_classify(0)"><a>祛痘祛粉</a></li>
+                                        <li onclick="knowledge_classify(1)"><a>淡化痘印</a></li>
+                                        <li onclick="knowledge_classify(2)"><a>改善敏感</a></li>
+                                        <li onclick="knowledge_classify(3)"><a>美白护肤</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="row" onclick="knowledge_detail_link(0)">
+                                    <div class="col-md-6 col-xs-6 col-sm-6">
+                                        <div class="thumbnail">
+                                            <img src="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-6 col-sm-6">
+                                        <div class="jumbotron">
+                                            <h3></h3>
+                                            <p></p>
+                                            <div class="col-md-4">
+                                                <img src='res/img/home/箭头2.png' style='display: none;margin-left:-12px'>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" onclick="knowledge_detail_link(1)">
+                                    <div class="col-md-6 col-xs-6 col-sm-6">
+                                        <div class="thumbnail">
+                                            <img src="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-6 col-sm-6">
+                                        <div class="jumbotron">
+                                            <h3></h3>
+                                            <p></p>
+                                            <div class="col-md-4">
+                                                <img src='res/img/home/箭头2.png' style='display: none;margin-left:-12px'>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" id="news">
+                                <ul>
+                                    <li onclick="knowledge_detail_link(0)"></li>
+                                    <li onclick="knowledge_detail_link(1)"></li>
+                                    <li onclick="knowledge_detail_link(2)"></li>
+                                    <li onclick="knowledge_detail_link(3)"></li>
+                                    <li onclick="knowledge_detail_link(4)"></li>
+                                    <li onclick="knowledge_detail_link(5)"></li>
+                                    <li onclick="knowledge_detail_link(6)"></li>
+                                    <li onclick="knowledge_detail_link(7)"></li>
+                                    <li onclick="knowledge_detail_link(8)"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row hidden" id="propaganda">
+            <div class="col-md-12 col-lg-10 col-lg-offset-1 col-sm-12 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="center-block">
+                            <h3 class="panel-title">魅诗肌视频介绍</h3>
+                            <p>——VIDEO　INTRODUCTION——</p>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class='video' onclick="window.parent.$('#video').modal('show')"></div>
+                                <div class='shade'></div>
+                                <img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
-    <footer>
-
+    <footer class="row hidden">
+        <div class="col-md-12 col-lg-10 col-lg-offset-1 col-xs-12">
+            <h3>广州魅诗肌生物科技有限公司</h3>
+        </div>
+        <div class="col-md-12 col-lg-10 col-lg-offset-1 col-xs-12">
+            <!--<address>-->
+                <!--地点：广州市天河区棠东东南路10号028房-->
+            <!--</address>-->
+            <address>
+                邮编：510000
+            </address>
+            <address>
+                总部电话：020-28178401
+            </address>
+            <address>
+                客服QQ：2485052805
+            </address>
+            <address>
+                邮箱：2485052805@qq.com
+            </address>
+        </div>
+        <div class="col-md-12 col-lg-10 col-lg-offset-1 col-xs-12" style="clear: both;position: relative">
+            <address>
+                <div id="telephone"></div>
+                <div id="qq"></div>
+                <div id="wechat1" onclick="window.parent.$('#wechat').modal('show')"></div>
+            </address>
+        </div>
+        <div class="col-md-12 col-lg-10 col-lg-offset-1 col-xs-12" style="clear: both">
+            <p>
+                广州魅诗肌生物科技有限公司版权所有 粤ICP备 17035173号
+            </p>
+            <p>
+                郑重声明：未经授权禁止转载，网页图文均属官方所有，否者追究法律责任
+            </p>
+        </div>
     </footer>
 </div>
 </body>
-<script>
-    $(document).ready(function () {
-        initHome();
-        ininBrand();
-        initSkin();
-        load.onload =function() {
-            window.parent.$("#loading").modal('hide');
-        }
-    });
-</script>
 </html>

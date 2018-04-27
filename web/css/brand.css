@@ -6,9 +6,6 @@ html{
 *{
     font-family: "Microsoft YaHei";
 }
-.container-fluid{
-    padding: 0;
-}
 .panel-default{
     border: none;
 }

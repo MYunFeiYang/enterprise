@@ -113,6 +113,18 @@
                     </div>
                 </div>
                 <div class="row" id="main">
+                    <div class="col-md-10 col-sm-9 col-xs-12">
+                        <div class="row hidden-md hidden-lg hidden-sm" style="margin-left: 0;margin-right: 0">
+                            <div>
+                                <div class="col-xs-6">
+                                    <button class="btn btn-active">商品详情</button>
+                                </div>
+                                <div class="col-xs-6">
+                                    <button class="btn">产品参数</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row" style="margin: 0">
                         <div class="col-md-12 hidden-xs" id="parameter">
                             <div class="row">
@@ -160,16 +172,6 @@
                         </div>
                     </div>
                     <div class="col-md-10 col-sm-9">
-                        <div class="row hidden-md hidden-lg hidden-sm" style="margin-left: 0;margin-right: 0">
-                            <div>
-                                <div class="col-xs-6">
-                                    <button class="btn btn-active">商品详情</button>
-                                </div>
-                                <div class="col-xs-6">
-                                    <button class="btn">产品参数</button>
-                                </div>
-                            </div>
-                        </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="row hidden-xs" style="margin-bottom: 20px;padding: 0;">
@@ -343,11 +345,11 @@
                 $(this).parents(".row:first").find("button").removeClass("btn-active");
                 $(this).addClass("btn-active");
                 if (index==0){
-                    $("#main .col-md-12:first").addClass("hidden-xs");
+                    $("#parameter").addClass("hidden-xs");
                     $("#main img:first").removeClass("hidden-xs");
                 }else {
                     $("#main img:first").addClass("hidden-xs");
-                    $("#main .col-md-12:first").removeClass("hidden-xs");
+                    $("#parameter").removeClass("hidden-xs");
                 }
             });
         })

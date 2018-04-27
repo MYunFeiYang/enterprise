@@ -19,12 +19,12 @@ function initProduct() {
         price: ["￥258/150ml", "￥236/120ml", "￥396/200g", "￥258/25g", "￥456/80ml", "￥336/50ml",
             "￥272/25ml*5片", "￥178/100ml", "￥396/50ml", "￥372.00/50ml", "￥1028/3件", "￥1064/3件", "￥866/3件",
             "￥1718/5件", "￥1930/6件", "￥1162/4件"],
-        classify: [[0, 1, 7], [2,3,8,9], [4,5,6], [10,11,12,13,14,15]],
+        classify: [[0, 1, 7], [2, 3, 8, 9], [4, 5, 6], [10, 11, 12, 13, 14, 15]],
         init: function () {
-            if ($(window).width()>768){
+            if ($(window).width() <= 768) {
                 $("#content").html("<div class=\"row\">\n" +
                     "                        <div class=\"col-md-4  col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('0')\" class=\"thumbnail\">\n" +
+                    "                            <div class=\"thumbnail\">\n" +
                     "                                <img>\n" +
                     "                                <div class=\"caption\">\n" +
                     "                                    <h6></h6>\n" +
@@ -33,7 +33,7 @@ function initProduct() {
                     "                            </div>\n" +
                     "                        </div>\n" +
                     "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('1')\" class=\"thumbnail\">\n" +
+                    "                            <div class=\"thumbnail\">\n" +
                     "                                <img >\n" +
                     "                                <div class=\"caption\">\n" +
                     "                                    <h6></h6>\n" +
@@ -42,18 +42,7 @@ function initProduct() {
                     "                            </div>\n" +
                     "                        </div>\n" +
                     "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('2')\" class=\"thumbnail\">\n" +
-                    "                                <img >\n" +
-                    "                                <div class=\"caption\">\n" +
-                    "                                    <h6></h6>\n" +
-                    "                                    <p></p>\n" +
-                    "                                </div>\n" +
-                    "                            </div>\n" +
-                    "                        </div>\n" +
-                    "                    </div>\n" +
-                    "                    <div class=\"row\">\n" +
-                    "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('3')\" class=\"thumbnail\">\n" +
+                    "                            <div class=\"thumbnail\">\n" +
                     "                                <img >\n" +
                     "                                <div class=\"caption\">\n" +
                     "                                    <h6></h6>\n" +
@@ -62,7 +51,7 @@ function initProduct() {
                     "                            </div>\n" +
                     "                        </div>\n" +
                     "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('4')\" class=\"thumbnail\">\n" +
+                    "                            <div class=\"thumbnail\">\n" +
                     "                                <img >\n" +
                     "                                <div class=\"caption\">\n" +
                     "                                    <h6></h6>\n" +
@@ -71,18 +60,7 @@ function initProduct() {
                     "                            </div>\n" +
                     "                        </div>\n" +
                     "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('5')\" class=\"thumbnail\">\n" +
-                    "                                <img >\n" +
-                    "                                <div class=\"caption\">\n" +
-                    "                                    <h6></h6>\n" +
-                    "                                    <p></p>\n" +
-                    "                                </div>\n" +
-                    "                            </div>\n" +
-                    "                        </div>\n" +
-                    "                    </div>\n" +
-                    "                    <div class=\"row\">\n" +
-                    "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('6')\" class=\"thumbnail\">\n" +
+                    "                            <div class=\"thumbnail\">\n" +
                     "                                <img >\n" +
                     "                                <div class=\"caption\">\n" +
                     "                                    <h6></h6>\n" +
@@ -91,7 +69,7 @@ function initProduct() {
                     "                            </div>\n" +
                     "                        </div>\n" +
                     "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('7')\" class=\"thumbnail\">\n" +
+                    "                            <div class=\"thumbnail\">\n" +
                     "                                <img >\n" +
                     "                                <div class=\"caption\">\n" +
                     "                                    <h6></h6>\n" +
@@ -100,7 +78,7 @@ function initProduct() {
                     "                            </div>\n" +
                     "                        </div>\n" +
                     "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('8')\" class=\"thumbnail\">\n" +
+                    "                            <div class=\"thumbnail\">\n" +
                     "                                <img >\n" +
                     "                                <div class=\"caption\">\n" +
                     "                                    <h6></h6>\n" +
@@ -108,85 +86,18 @@ function initProduct() {
                     "                                </div>\n" +
                     "                            </div>\n" +
                     "                        </div>\n" +
-                    "                    </div>");
-            }
-            else {
-                $("#content").html("<div class=\"row\">\n" +
-                    "                        <div class=\"col-md-4  col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('0')\" class=\"thumbnail\">\n" +
+                    "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
+                    "                            <div class=\"thumbnail\">\n" +
+                    "                                <img >\n" +
+                    "                                <div class=\"caption\">\n" +
+                    "                                    <h6></h6>\n" +
+                    "                                    <p></p>\n" +
+                    "                                </div>\n" +
+                    "                            </div>\n" +
+                    "                        </div>\n" +
+                    "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
+                    "                            <div class=\"thumbnail\">\n" +
                     "                                <img>\n" +
-                    "                                <div class=\"caption\">\n" +
-                    "                                    <h6></h6>\n" +
-                    "                                    <p></p>\n" +
-                    "                                </div>\n" +
-                    "                            </div>\n" +
-                    "                        </div>\n" +
-                    "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('1')\" class=\"thumbnail\">\n" +
-                    "                                <img >\n" +
-                    "                                <div class=\"caption\">\n" +
-                    "                                    <h6></h6>\n" +
-                    "                                    <p></p>\n" +
-                    "                                </div>\n" +
-                    "                            </div>\n" +
-                    "                        </div>\n" +
-                    "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('2')\" class=\"thumbnail\">\n" +
-                    "                                <img >\n" +
-                    "                                <div class=\"caption\">\n" +
-                    "                                    <h6></h6>\n" +
-                    "                                    <p></p>\n" +
-                    "                                </div>\n" +
-                    "                            </div>\n" +
-                    "                        </div>\n" +
-                    "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('3')\" class=\"thumbnail\">\n" +
-                    "                                <img >\n" +
-                    "                                <div class=\"caption\">\n" +
-                    "                                    <h6></h6>\n" +
-                    "                                    <p></p>\n" +
-                    "                                </div>\n" +
-                    "                            </div>\n" +
-                    "                        </div>\n" +
-                    "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('4')\" class=\"thumbnail\">\n" +
-                    "                                <img >\n" +
-                    "                                <div class=\"caption\">\n" +
-                    "                                    <h6></h6>\n" +
-                    "                                    <p></p>\n" +
-                    "                                </div>\n" +
-                    "                            </div>\n" +
-                    "                        </div>\n" +
-                    "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('5')\" class=\"thumbnail\">\n" +
-                    "                                <img >\n" +
-                    "                                <div class=\"caption\">\n" +
-                    "                                    <h6></h6>\n" +
-                    "                                    <p></p>\n" +
-                    "                                </div>\n" +
-                    "                            </div>\n" +
-                    "                        </div>\n" +
-                    "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('6')\" class=\"thumbnail\">\n" +
-                    "                                <img >\n" +
-                    "                                <div class=\"caption\">\n" +
-                    "                                    <h6></h6>\n" +
-                    "                                    <p></p>\n" +
-                    "                                </div>\n" +
-                    "                            </div>\n" +
-                    "                        </div>\n" +
-                    "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('7')\" class=\"thumbnail\">\n" +
-                    "                                <img >\n" +
-                    "                                <div class=\"caption\">\n" +
-                    "                                    <h6></h6>\n" +
-                    "                                    <p></p>\n" +
-                    "                                </div>\n" +
-                    "                            </div>\n" +
-                    "                        </div>\n" +
-                    "                        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n" +
-                    "                            <div onclick=\"product_detail_link('8')\" class=\"thumbnail\">\n" +
-                    "                                <img >\n" +
                     "                                <div class=\"caption\">\n" +
                     "                                    <h6></h6>\n" +
                     "                                    <p></p>\n" +
@@ -209,48 +120,74 @@ function initProduct() {
             $("#content p").each(function (index) {
                 $(this).html(product.price[index])
             });
-            if ($(window).width()<=768){
-                window.parent.$("#suspend").css("display","none");
-                window.parent.$(".navbar-brand:first").css("display","block");
-            };
+            if ($(window).width() <= 768) {
+                window.parent.$("#suspend").css("display", "none");
+                window.parent.$(".navbar-brand:first").css("display", "block");
+            }
+            ;
+            if (/(iPhone|iPad|iPod)/i.test(navigator.userAgent)) {
+                $(".caption").each(function (index) {
+                    $(this).click(function () {
+                        window.parent.product_detail_link(index);
+                    })
+                })
+            } else {
+                $(".thumbnail").each(function (index) {
+                    $(this).click(function () {
+                        window.parent.product_detail_link(index);
+                    })
+                })
+            }
         }
     };
     $(".thumbnail").each(function () {
-        $(this).css("display","block");
+        $(this).css("display", "block");
     });
     $(".pagination:last li:last").each(function () {
-        $(this).css("display","inline");
+        $(this).css("display", "inline");
     });
     product.init();
 }
 
-function paging(m,obj) {
-    var brothers=obj.parentNode.children;
-    for (var i=0;i<brothers.length;i++){
+function paging(m, obj) {
+    var brothers = obj.parentNode.children;
+    for (var i = 0; i < brothers.length; i++) {
         brothers[i].classList.remove("active");
     }
     obj.classList.add("active");
     $(".thumbnail").each(function () {
-        $(this).css("display","block");
+        $(this).css("display", "block");
     });
     //content
     $("#content img").each(function (index) {
-        var j=index+m*9;
-        if (product.img[j]!==undefined){
+        var j = index + m * 9;
+        if (product.img[j] !== undefined) {
             $(this).attr("src", product.path + product.img[j]);
-            $(this).parent().attr("onclick", "product_detail_link(${"+j+"})");
-        }else {
-            $(this).parent().css("display","none");
+            if (/(iPhone|iPad|iPod)/i.test(navigator.userAgent)) {
+                $(".caption").each(function (index1) {
+                    $(this).click(function () {
+                        window.parent.product_detail_link(index1+ m * 9);
+                    })
+                })
+            } else {
+                $(".thumbnail").each(function (index1) {
+                    $(this).click(function () {
+                        window.parent.product_detail_link(index1+ m * 9);
+                    })
+                })
+            }
+        } else {
+            $(this).parent().css("display", "none");
         }
     });
     $("#content h6").each(function (index) {
-        var j=index+m*9;
+        var j = index + m * 9;
         if (product.name[j] !== undefined) {
             $(this).html(product.name[j])
         }
     });
     $("#content p").each(function (index) {
-        var j=index+m*9;
+        var j = index + m * 9;
         if (product.price[j] !== undefined) {
             $(this).html(product.price[j])
         }
@@ -259,18 +196,30 @@ function paging(m,obj) {
 
 function classify(m) {
     $(".thumbnail").each(function () {
-        $(this).css("display","block");
+        $(this).css("display", "block");
     });
     //content
     var content_img = document.getElementById("content").getElementsByTagName("img");
     for (var i = 0; i < product.classify[m].length; i++) {
         var j = product.classify[m][i];
         content_img[i].setAttribute("src", product.path + product.img[j]);
-        content_img[i].parentNode.setAttribute("onclick", "product_detail_link(${"+j+"})")
+        if (/(iPhone|iPad|iPod)/i.test(navigator.userAgent)) {
+            $(".caption").each(function () {
+                $(this).click(function () {
+                    window.parent.product_detail_link(j);
+                })
+            })
+        } else {
+            $(".thumbnail").each(function () {
+                $(this).click(function () {
+                    window.parent.product_detail_link(j);
+                })
+            })
+        }
     }
     //清除多余框
-    for (var i=product.classify[m].length;i<content_img.length;i++){
-        content_img[i].parentNode.style.display="none";
+    for (var i = product.classify[m].length; i < content_img.length; i++) {
+        content_img[i].parentNode.style.display = "none";
     }
     var content_name = document.getElementById("content").getElementsByTagName("h6");
     for (var i = 0; i < product.classify[m].length; i++) {
@@ -282,39 +231,36 @@ function classify(m) {
         var j = product.classify[m][i];
         content_price[i].innerText = product.price[j]
     }
-    $(".pagination:last li:last").css("display","none");
+    $(".pagination:last li:last").css("display", "none");
 }
 
-function product_detail_link(i) {
-    window.parent.$("#mainframe").attr("src", "productDetail.html?i=" + i)
-}
-$(document).scroll(function(e) {
-    if ($(window).width()>=768){
-        if($(document).scrollTop()!==0){
+$(document).scroll(function (e) {
+    if ($(window).width() >= 768) {
+        if ($(document).scrollTop() !== 0) {
             $("#title img:first").removeClass("animated flipInX");
             $("#title img:first").addClass("animated flipOutX");
-            $("#title img:first").css("animation-delay","0");
-            $("#title img:first").css("transform-origin","center bottom");
-            if ($("#title").offset().top-$(window).scrollTop()<20){
+            $("#title img:first").css("animation-delay", "0");
+            $("#title img:first").css("transform-origin", "center bottom");
+            if ($("#title").offset().top - $(window).scrollTop() < 20) {
                 $("#fixed").stop();
-                $("#fixed").css("position","fixed");
-            }else {
+                $("#fixed").css("position", "fixed");
+            } else {
                 $("#fixed").stop();
-                $("#fixed").css("position","absolute");
-                $("#fixed").animate({"top":"0"});
+                $("#fixed").css("position", "absolute");
+                $("#fixed").animate({"top": "0"});
             }
         }
-        else{
+        else {
             $("#title img:first").removeClass("animated flipOutX");
             $("#title img:first").addClass("animated flipInX");
             $("#fixed").stop();
-            $("#fixed").css("position","absolute");
-            $("#fixed").animate({"top":"10px"});
+            $("#fixed").css("position", "absolute");
+            $("#fixed").animate({"top": "10px"});
         }
     }
 });
 $(document).ready(function () {
-    if ($(window).width()>768){
+    if ($(window).width() > 768) {
         $("#content .row").each(function () {
             $(this).mouseenter(function () {
                 $(this).find(".thumbnail").each(function (index) {

@@ -73,8 +73,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand hidden-sm hidden-lg hidden-md" href="#">
-                        <img src="res/img/back.png" onClick="javascript :history.back(-1)"
-                             style="height: 30px;margin-top: 10px">
+                        <img src="res/img/back.png" id="backPrev" style="height: 30px;margin-top: 10px">
                     </a>
                     <a class="navbar-brand" href="#">
                         <img src="res/img/logo.png" style="height: 50px">
@@ -96,7 +95,7 @@
             </div><!-- /.container-fluid -->
         </nav>
     </header>
-    <main>
+    <main style="position: relative">
         <div class="btn-group-vertical" role="group" id="suspend">
             <button type="button" class="btn btn-default qq" id="qq_btn" onclick="QQ()">
             </button>
@@ -135,9 +134,8 @@
                 <h3>2485052805</h3>
             </li>
         </ul>
-        <div class="warp">
-            <iframe src="home.html" frameborder="0" name="mainframe" id="mainframe">
-
+        <div id="iframe-box">
+            <iframe src="home.html" height="100%" width="100%" name="mainframe" id="mainframe">
             </iframe>
         </div>
     </main>
@@ -145,6 +143,18 @@
 </body>
 <script>
     $(document).ready(function () {
+        $("#backPrev").click(function(){
+            if (/(iPhone|iPad|iPod)/i.test(navigator.userAgent)) {
+                window.history.go("-1");
+            } else { window.history.go("-1"); }
+        });
+        if (/iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase())) {
+            $("#iframe-box").css('overflow-y','scroll');
+            $("#mainframe").css("position","relative").css("top","5px");
+        }
+        if ($(window).width()<=768){
+            $('#wechat img:first').attr('src','res/img/home/product/suspend.png');
+        }
         $('#loading').modal({"backdrop": "static"}).modal('show').on("shown.bs.modal", function () {
             // 是弹出框居中。。。
             var $modal_dialog = $(this).find('.modal-dialog');

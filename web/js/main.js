@@ -203,7 +203,9 @@ function wechat_close() {
         $("#wechat_btn").removeClass('animated slideOutRight');
     }
 }
-
+function product_detail_link(i) {
+    $("#mainframe").attr("src", "productDetail.html?i=" + i)
+}
 function knowledge_detail_link(i) {
     $("#mainframe").attr("src", "knowledgeDetail.html?i=" + i)
 }

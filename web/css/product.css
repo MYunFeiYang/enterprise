@@ -54,9 +54,6 @@ article .thumbnail {
     border: none;
     overflow: hidden;
 }
-article .thumbnail:hover{
-    box-shadow: 1px 1px 5px 5px rgba(128,125,125,0.3);
-}
 
 article .thumbnail img {
     width:100%;
@@ -126,16 +123,25 @@ nav{
         position: absolute;
         bottom: 0;
     }
+    article .thumbnail:hover{
+        box-shadow: 1px 1px 5px 5px rgba(128,125,125,0.3);
+    }
 }
 @media (min-width:992px) and (max-width:1240px) {
     #title img{
         position: absolute;
         bottom: 0;
     }
+    article .thumbnail:hover{
+        box-shadow: 1px 1px 5px 5px rgba(128,125,125,0.3);
+    }
 }
 @media (min-width: 1240px) {
     #title img{
         position: absolute;
         bottom: 0;
+    }
+    article .thumbnail:hover{
+        box-shadow: 1px 1px 5px 5px rgba(128,125,125,0.3);
     }
 }

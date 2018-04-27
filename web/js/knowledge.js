@@ -77,7 +77,7 @@ function classify(m) {
     for (var i=0;i<knowledge.classify[m].length;i++){
         j=knowledge.classify[m][i];
         content_img[i].setAttribute("src",knowledge.path+knowledge.content.img[j]);
-        content_img[i].parentNode.parentNode.parentNode.parentNode.setAttribute("onclick","knowledge_detail_link(${"+j+"})")
+        content_img[i].parentNode.parentNode.parentNode.parentNode.setAttribute("onclick","window.parent.knowledge_detail_link("+j+")")
     }
     //清除多余模块
     for (var i=knowledge.classify[m].length;i<content_img.length;i++){

@@ -1,12 +1,13 @@
 var home;
 var onloadCount = 0;
+var Interval;
 
 function initHome() {
     home = {
         path: "res/img/home/",
         banner: {
             path: "banner/",
-            img: ["banner1.jpg", "banner2.jpg"]
+            img: ["banner3.jpg","banner1.jpg", "banner2.jpg"]
         },
         brand: {
             path: "brand/",
@@ -80,46 +81,54 @@ function initHome() {
             h3: ["抑痘时该注意什么？怎么做才能正确有效的抑...", "油性肌肤用什么面膜？"],
             p: ["青春痘的形成是因为皮脂腺分泌油脂，会通过皮脂腺导管，输送到皮肤表层的毛孔排出，进入青春期，皮脂腺油脂分泌就会旺盛，而皮脂",
                 "青春痘的形成是因为皮脂腺分泌油脂，会通过皮脂腺导管，输送到皮肤表层的毛孔排出，进入青春期，皮脂腺油脂分泌就会旺盛，而皮脂"],
-            classify:[
-                {path:"remove/",img:["抑痘时该注意什么？怎么做才能正确有效的抑....jpg","肌肤缺水该如何用喷雾来紧急补水呢？出门只....jpg"],
-                h3:["抑痘时该注意什么？怎么做才能正确有效的抑...","肌肤缺水该如何用喷雾来紧急补水呢？出门只..."],
-                p:["青春痘的形成是因为皮脂腺分泌油脂，会通过皮脂腺导管，输送到皮" +
-                "肤表层的毛孔排出，进入青春期，皮脂腺油脂分泌就会旺盛，而皮脂",
-                    "相信朋友们都遇到过这种情况，那就是出门后肌肤缺水，要给肌肤补" +
-                "水很不方便，没办法，总不能带张补水面膜或者带瓶补水乳在身上随\n"],
-                    link:[0,4]},
-                {path:"weaken/",img:["油性肌肤用什么面膜？.jpg","冬天来了，我们该怎么在冬天护肤呢？.jpg"],
-                    h3:["油性肌肤用什么面膜？","冬天来了，我们该怎么在冬天护肤呢？"],
-                    p:["相信大家都知道，皮肤有一个自我保护系统，当皮肤深层缺水时皮肤" +
+            classify: [
+                {
+                    path: "remove/", img: ["抑痘时该注意什么？怎么做才能正确有效的抑....jpg", "肌肤缺水该如何用喷雾来紧急补水呢？出门只....jpg"],
+                    h3: ["抑痘时该注意什么？怎么做才能正确有效的抑...", "肌肤缺水该如何用喷雾来紧急补水呢？出门只..."],
+                    p: ["青春痘的形成是因为皮脂腺分泌油脂，会通过皮脂腺导管，输送到皮" +
+                    "肤表层的毛孔排出，进入青春期，皮脂腺油脂分泌就会旺盛，而皮脂",
+                        "相信朋友们都遇到过这种情况，那就是出门后肌肤缺水，要给肌肤补" +
+                        "水很不方便，没办法，总不能带张补水面膜或者带瓶补水乳在身上随\n"],
+                    link: [0, 4]
+                },
+                {
+                    path: "weaken/", img: ["油性肌肤用什么面膜？.jpg", "冬天来了，我们该怎么在冬天护肤呢？.jpg"],
+                    h3: ["油性肌肤用什么面膜？", "冬天来了，我们该怎么在冬天护肤呢？"],
+                    p: ["相信大家都知道，皮肤有一个自我保护系统，当皮肤深层缺水时皮肤" +
                     "就会分泌出大量的油脂来保护皮肤，油性肌肤就是因为肌肤极度缺水",
                         "冬天已经到了，很多朋友都不知道该怎么在这季节护肤，其实，在冬" +
                         "天护肤有一点很重要，那就是肌肤的补水工作，北方的朋友可要仔细"],
-                    link:[1,2]},
-                {path:"better/",img:["敏感肌肤是什么肌肤？看过之后你就明白了.jpg","敏感肌肤要注意什么？.jpg"],
-                    h3:["敏感肌肤是什么肌肤？看过之后你就明白了","敏感肌肤要注意什么？"],
-                    p:["我们时不时的在某篇文章或者某篇报道看到“敏感肌肤”这四个字眼" +
+                    link: [1, 2]
+                },
+                {
+                    path: "better/", img: ["敏感肌肤是什么肌肤？看过之后你就明白了.jpg", "敏感肌肤要注意什么？.jpg"],
+                    h3: ["敏感肌肤是什么肌肤？看过之后你就明白了", "敏感肌肤要注意什么？"],
+                    p: ["我们时不时的在某篇文章或者某篇报道看到“敏感肌肤”这四个字眼" +
                     "，可很多人却不知道敏感肌肤是什么肌肤，今天，我们就来说说这个\n",
                         "冬天已经到了，很多朋友都不知道该怎么在这季节护肤，其实，在冬" +
                         "天护肤有一点很重要，那就是肌肤的补水工作，北方的朋友可要仔细"],
-                    link:[5,6]},
-                {path:"whitening/",img:["明星皮肤这么好，原来是有原因的！.jpg","每天吃这几样水果，可以让肌肤水润光滑.jpg"],
-                    h3:["明星皮肤这么好，原来是有原因的！","每天吃这几样水果，可以让肌肤水润光滑"],
-                    p:["很多朋友经常看到电视上那些明星皮肤很好，常常会惊讶，为什么她" +
+                    link: [5, 6]
+                },
+                {
+                    path: "whitening/", img: ["明星皮肤这么好，原来是有原因的！.jpg", "每天吃这几样水果，可以让肌肤水润光滑.jpg"],
+                    h3: ["明星皮肤这么好，原来是有原因的！", "每天吃这几样水果，可以让肌肤水润光滑"],
+                    p: ["很多朋友经常看到电视上那些明星皮肤很好，常常会惊讶，为什么她" +
                     "们岁数那么大了，皮肤却还是这么好？其实，她们很注重皮肤的保养",
                         "很多人看了标题后就奇怪了，水果也能美容吗？答案是当然的，涨姿" +
                         "势了吧？小编告诉你，水果的美容作用可不小哦，特别是这篇文章中"],
-                    link:[3,7]}
-                ]
+                    link: [3, 7]
+                }
+            ]
 
         },
         propaganda: {
             path: "propaganda/",
-            img: "propaganda.jpg"
+            img: "video_introduction.png"
         },
         init: function () {
-            if($(window).width()<=768){
-                window.parent.$("#suspend").css("display","block");
-                window.parent.$(".navbar-brand:first").css("display","none");
+            if ($(window).width() <= 768) {
+                window.parent.$("#suspend").css("display", "block");
+                window.parent.$(".navbar-brand:first").css("display", "none");
             }
             //banner
             $("#banner img").each(function (index) {
@@ -135,41 +144,7 @@ function initHome() {
 
 function ininBrand() {
     //brand
-    $("#brand").html(" <div class=\"col-md-12 col-lg-10 col-lg-offset-1 col-xs-12 col-sm-12\">\n" +
-        "                <div class=\"panel panel-default\">\n" +
-        "                    <div class=\"panel-heading\">\n" +
-        "                        <div class=\"center-block\">\n" +
-        "                            <h3 class=\"panel-title\">品牌介绍</h3>\n" +
-        "                            <p>——BRAND——</p>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                    <div class=\"panel-body\" style=\"position: relative\">\n" +
-        "                        <div class=\"row\" onclick=\"window.parent.$('#mainframe').attr('src','brand.html')\">\n" +
-        "                            <div class=\"col-md-9 col-xs-9 col-sm-9\">\n" +
-        "                                <div class=\"content\">\n" +
-        "                                    <div class=\"row\">\n" +
-        "                                        <div class=\"col-md-9 col-md-offset-1 col-sm-11 col-xs-11\">\n" +
-        "                                            <div class=\"jumbotron\">\n" +
-        "                                                <h3></h3>\n" +
-        "                                                <h6></h6>\n" +
-        "                                                <p></p>\n" +
-        "                                                <div class='border_bottom'></div>\n" +
-        "                                                <div class=\"col-md-3\">\n" +
-        "                                                <img src='res/img/home/箭头.png' style='margin-left:-12px'>\n" +
-        "                                               </div>\n" +
-        "                                            </div>\n" +
-        "                                        </div>\n" +
-        "                                    </div>\n" +
-        "                                </div>\n" +
-        "                            </div>\n" +
-        "                            <div class=\"col-md-4 col-xs-4 col-sm-4\">\n" +
-        "                               <div class='shade'></div>\n"+
-        "                            <img>\n" +
-        "                            </div>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                </div>\n" +
-        "            </div>")
+    $("#brand").html()
     $("#brand img:last").attr("src", home.path + home.brand.path + home.brand.img);
     $("#brand h3:last").html(home.brand.h3);
     $("#brand h6:first").html(home.brand.h6);
@@ -178,111 +153,7 @@ function ininBrand() {
 
 function initSkin() {
     //skin
-    if ($(window).width()>=768){
-        $("#skin").html("<div class=\"col-md-12 col-lg-10 col-lg-offset-1 col-xs-12 col-sm-12\">\n" +
-            "                <div class=\"panel panel-default\">\n" +
-            "                    <div class=\"panel-heading\">\n" +
-            "                        <div class=\"center-block\">\n" +
-            "                            <h3 class=\"panel-title\">皮肤问题</h3>\n" +
-            "                            <p>——SKIN PROBLEMS——</p>\n" +
-            "                        </div>\n" +
-            "                    </div>\n" +
-            "                    <div class=\"panel-body\">\n" +
-            "                        <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n" +
-            "                            <!-- Wrapper for slides -->\n" +
-            "                            <div class=\"carousel-inner\" role=\"listbox\">\n" +
-            "                                <div class=\"item active\">\n" +
-            "                                    <div class=\"row\">\n" +
-            "                                        <div class=\"col-md-4 col-sm-4\">\n" +
-            "                                            <div class=\"thumbnail\">\n" +
-            "                                                <img onclick=\"skin_problem_link('0')\">\n" +
-            "                                                <div class=\"caption\">\n" +
-            "                                                    <h3></h3>\n" +
-            "                                                    <p></p>\n" +
-            "                                                    <button class=\"btn btn-default center-block\" role=\"button\" onclick=\"skin_problem_link('0')\">了解更多\n" +
-            "                                                    </button>\n" +
-            "                                                </div>\n" +
-            "                                            </div>\n" +
-            "                                        </div>\n" +
-            "                                        <div class=\"col-md-4 col-sm-4\">\n" +
-            "                                            <div class=\"thumbnail\">\n" +
-            "                                                <img onclick=\"skin_problem_link('1')\">\n" +
-            "                                                <div class=\"caption\">\n" +
-            "                                                    <h3></h3>\n" +
-            "                                                    <p></p>\n" +
-            "                                                    <button class=\"btn btn-default center-block\" role=\"button\" onclick=\"skin_problem_link('1')\">了解更多\n" +
-            "                                                    </button>\n" +
-            "                                                </div>\n" +
-            "                                            </div>\n" +
-            "                                        </div>\n" +
-            "                                        <div class=\"col-md-4 col-sm-4\">\n" +
-            "                                            <div class=\"thumbnail\">\n" +
-            "                                                <img onclick=\"skin_problem_link('2')\">\n" +
-            "                                                <div class=\"caption\">\n" +
-            "                                                    <h3></h3>\n" +
-            "                                                    <p></p>\n" +
-            "                                                    <button class=\"btn btn-default center-block\" role=\"button\" onclick=\"skin_problem_link('2')\">了解更多\n" +
-            "                                                    </button>\n" +
-            "                                                </div>\n" +
-            "                                            </div>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "                                <div class=\"item\">\n" +
-            "                                    <div class=\"row\">\n" +
-            "                                        <div class=\"col-md-4 col-sm-4\">\n" +
-            "                                            <div class=\"thumbnail\">\n" +
-            "                                                <img onclick=\"skin_problem_link('3')\">\n" +
-            "                                                <div class=\"caption\">\n" +
-            "                                                    <h3></h3>\n" +
-            "                                                    <p></p>\n" +
-            "                                                    <button class=\"btn btn-default center-block\" role=\"button\" onclick=\"skin_problem_link('3')\">了解更多\n" +
-            "                                                    </button>\n" +
-            "                                                </div>\n" +
-            "                                            </div>\n" +
-            "                                        </div>\n" +
-            "                                        <div class=\"col-md-4 col-sm-4\">\n" +
-            "                                            <div class=\"thumbnail\">\n" +
-            "                                                <img onclick=\"skin_problem_link('4')\">\n" +
-            "                                                <div class=\"caption\">\n" +
-            "                                                    <h3></h3>\n" +
-            "                                                    <p></p>\n" +
-            "                                                    <button class=\"btn btn-default center-block\" role=\"button\" onclick=\"skin_problem_link('4')\">了解更多\n" +
-            "                                                    </button>\n" +
-            "                                                </div>\n" +
-            "                                            </div>\n" +
-            "                                        </div>\n" +
-            "                                        <div class=\"col-md-4 col-sm-4\">\n" +
-            "                                            <div class=\"thumbnail\">\n" +
-            "                                                <img onclick=\"skin_problem_link('5')\">\n" +
-            "                                                <div class=\"caption\">\n" +
-            "                                                    <h3></h3>\n" +
-            "                                                    <p></p>\n" +
-            "                                                    <button class=\"btn btn-default center-block\" role=\"button\" onclick=\"skin_problem_link('5')\">了解更多\n" +
-            "                                                    </button>\n" +
-            "                                                </div>\n" +
-            "                                            </div>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                            <!-- Controls -->\n" +
-            "                            <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\"\n" +
-            "                               data-slide=\"prev\">\n" +
-            "                                <div id=\"skin_control_left\"></div>\n" +
-            "                                <span class=\"sr-only\">Previous</span>\n" +
-            "                            </a>\n" +
-            "                            <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\"\n" +
-            "                               data-slide=\"next\">\n" +
-            "                                <div id=\"skin_control_right\"></div>\n" +
-            "                                <span class=\"sr-only\">Next</span>\n" +
-            "                            </a>\n" +
-            "                        </div>\n" +
-            "                    </div>\n" +
-            "                </div>\n" +
-            "            </div>");
-    }
-    else {
+    if ($(window).width() < 768) {
         $("#skin").html("<div class=\"col-md-12 col-lg-10 col-lg-offset-1 col-xs-12 col-sm-12\">\n" +
             "                <div class=\"panel panel-default\">\n" +
             "                    <div class=\"panel-heading\">\n" +
@@ -421,78 +292,12 @@ function initSkin() {
 
 function initCooperation() {
     //cooperation
-    $("#cooperation").html("<div class=\"col-md-12 col-lg-10 col-lg-offset-1 col-xs-12 col-sm-12\">\n" +
-        "                <div class=\"panel panel-default\">\n" +
-        "                    <div class=\"panel-heading\">\n" +
-        "                        <div class=\"center-block\">\n" +
-        "                            <h3 class=\"panel-title\">合作伙伴</h3>\n" +
-        "                            <p>——COOPERATION——</p>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                    <div class=\"panel-body\">\n" +
-        "                        <div class=\"row\"  onclick=\"window.parent.$('#mainframe').attr('src','cooperation.html')\">\n" +
-        "                            <div class=\"col-md-6 col-xs-6 col-sm-6\">\n" +
-        "                               <div class='shade'></div>\n"+
-        "                                <img>\n" +
-        "                            </div>\n" +
-        "                            <div class=\"col-md-6 col-xs-6 col-sm-6\">\n" +
-        "                                <div class=\"jumbotron\">\n" +
-        "                                    <h3></h3>\n" +
-        "                                    <h6></h6>\n" +
-        "                                    <p></p>\n" +
-        "                           <button class=\"btn btn-sm center-block\" style='display: none;border: none' role=\"button\" onclick=\"window.parent.$('#mainframe').attr('src','cooperation.html')\">了解更多\n" +
-        "                           </button>\n" +
-        "                                </div>\n" +
-        "                            </div>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                </div>\n" +
-        "            </div>\n" +
-        "            <div class=\"background\">\n" +
-        "\n" +
-        "            </div>")
+    $("#cooperation").removeClass("hidden");
     $("#cooperation img:first").attr("src", home.path + home.cooperation.path + home.cooperation.img);
     $("#cooperation h3:last").html(home.cooperation.h3);
     $("#cooperation h6:first").html(home.cooperation.h6);
     $("#cooperation p:last").html(home.cooperation.p);
-}
-
-function initProduct() {
-    //product
-    $("#product").append("<div class=\"col-md-12 col-lg-10 col-lg-offset-1  col-xs-12 col-sm-12\">\n" +
-        "                <div class=\"panel panel-default\">\n" +
-        "                    <div class=\"panel-heading\">\n" +
-        "                        <div class=\"center-block\">\n" +
-        "                            <h3 class=\"panel-title\">产品</h3>\n" +
-        "                            <p>——PRODUCT——</p>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                    <div class=\"panel-body\">\n" +
-        "                        <div class=\"row\">\n" +
-        "                            <button class=\"btn btn-primary\">基础系列</button>\n" +
-        "                        </div>\n" +
-        "                        <div class=\"row\" id=\"step1\">\n" +
-        "                        </div>\n" +
-        "                        <div class=\"row\">\n" +
-        "                            <button class=\"btn btn-primary\">祛痘系列</button>\n" +
-        "                        </div>\n" +
-        "                        <div class=\"row\" id=\"step2\">\n" +
-        "                        </div>\n" +
-        "                        <div class=\"row\">\n" +
-        "                            <button class=\"btn btn-primary\">改善系列</button>\n" +
-        "                        </div>\n" +
-        "                        <div class=\"row\" id=\"step3\">\n" +
-        "                        </div>\n" +
-        "                        <div class=\"row\">\n" +
-        "                            <button class=\"btn btn-primary\">精选套装</button>\n" +
-        "                        </div>\n" +
-        "                        <div class=\"row\" id=\"step4\">\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                </div>\n" +
-        "            </div>\n" +
-        "            <div class=\"background\">\n" +
-        "            </div>")
+    $("#product").removeClass("hidden");
 }
 
 function initProductStep1() {
@@ -715,7 +520,7 @@ function initProductStep4() {
         "                                        <p></p>\n" +
         "                                    </div>\n" +
         "                                </div>\n" +
-        "                            </div>\n"+
+        "                            </div>\n" +
         "                            <div class=\"col-md-4 col-xs-6 col-sm-6\">\n" +
         "                                <div class=\"thumbnail\" onclick=\"product_detail_link(10)\">\n" +
         "                                    <img src=\"\">\n" +
@@ -759,34 +564,7 @@ function initProductStep4() {
 
 function initHistory() {
     //history
-    $("#history").html("<div class=\"col-lg-9 col-lg-offset-2 col-md-11 col-md-offset-1 col-sm-11 col-xs-offset-1 col-sm-11 col-sm-offset-1\">\n" +
-        "                <div class=\"panel panel-default\">\n" +
-        "                    <div class=\"panel-heading\">\n" +
-        "                        <div class=\"center-block\">\n" +
-        "                            <h3 class=\"panel-title\">护肤历史</h3>\n" +
-        "                            <p>——PROPAGANDA——</p>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                    <div class=\"panel-body\">\n" +
-        "                        <div class=\"row\">\n" +
-        "                            <div class=\"col-md-6  col-sm-6 col-xs-6 history_img\" onclick=\"window.parent.$('#skin_history_details').modal('show')\">\n" +
-        "                               <div class='shade'></div>\n"+
-        "                                <img id='history_img'>\n" +
-        "                            </div>\n" +
-        "                            <div class=\"col-md-5  col-sm-7 col-xs-7 \">\n" +
-        "                                <div class=\"jumbotron\">\n" +
-        "                                    <h3></h3>\n" +
-        "                                    <p></p>\n" +
-        "                                    <div class='border_bottom'></div>\n" +
-        "                            <div class=\"col-md-3\">\n" +
-        "                                <img src='res/img/home/箭头.png' style='display: none;margin-left: -12px'>\n" +
-        "                            </div>\n" +
-        "                                </div>\n" +
-        "                            </div>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                </div>\n" +
-        "            </div>")
+    $("#history").removeClass("hidden");
     $("#history img:first").attr("src", home.path + home.history.path + home.history.img)
     $("#history h3:last").html(home.history.h3);
     $("#history p:last").html(home.history.p);
@@ -795,81 +573,8 @@ function initHistory() {
 
 function initKnowledge() {
     //knowledge
-    if ($(window).width()>768){
-        $("#knowledge").html("<div class=\"col-md-12 col-lg-10 col-lg-offset-1\">\n" +
-            "                <div class=\"panel panel-default\">\n" +
-            "                    <div class=\"panel-heading\">\n" +
-            "                        <div class=\"center-block\">\n" +
-            "                            <h3 class=\"panel-title\">科普知识</h3>\n" +
-            "                            <p>——KNOWLEDGE——</p>\n" +
-            "                        </div>\n" +
-            "                    </div>\n" +
-            "                    <div class=\"panel-body\">\n" +
-            "                        <div class=\"row\">\n" +
-            "                            <div class=\"col-md-12\">\n" +
-            "                              <nav aria-label=\"...\">\n" +
-            "                                   <ul class=\"pagination\">\n" +
-            "                                        <li class=\"active\"  onclick=\"initKnowledge()\"><a>全部</a></li>\n" +
-            "                                        <li  onclick=\"knowledge_classify(0)\"><a>祛痘祛粉</a></li>\n" +
-            "                                        <li  onclick=\"knowledge_classify(1)\"><a>淡化痘印</a></li>\n" +
-            "                                        <li onclick=\"knowledge_classify(2)\"><a>改善敏感</a></li>\n" +
-            "                                        <li onclick=\"knowledge_classify(3)\"><a>美白护肤</a></li>\n" +
-            "                                   </ul>\n" +
-            "                            </nav>\n"+
-            "                            </div>\n" +
-            "                        </div>\n" +
-            "                        <div class=\"row\">\n" +
-            "                            <div class=\"col-md-8\">\n" +
-            "                                <div class=\"row\" onclick=\"knowledge_detail_link(0)\">\n" +
-            "                                    <div class=\"col-md-6 col-xs-6 col-sm-6\">\n" +
-            "                                        <div class=\"thumbnail\">\n" +
-            "                                            <img src=\"\">\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                    <div class=\"col-md-6 col-xs-6 col-sm-6\">\n" +
-            "                                        <div class=\"jumbotron\">\n" +
-            "                                            <h3></h3>\n" +
-            "                                            <p></p>\n" +
-            "                            <div class=\"col-md-4\">\n" +
-            "                                                <img src='res/img/home/箭头2.png' style='display: none;margin-left:-12px'>\n" +
-            "                            </div>\n" +
-            "                                        </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "                                <div class=\"row\" onclick=\"knowledge_detail_link(1)\">\n" +
-            "                                <div class=\"col-md-6 col-xs-6 col-sm-6\">\n" +
-            "                                    <div class=\"thumbnail\">\n" +
-            "                                        <img src=\"\">\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "                                <div class=\"col-md-6 col-xs-6 col-sm-6\">\n" +
-            "                                    <div class=\"jumbotron\">\n" +
-            "                                        <h3></h3>\n" +
-            "                                        <p></p>\n" +
-            "                            <div class=\"col-md-4\">\n" +
-            "                                                <img src='res/img/home/箭头2.png' style='display: none;margin-left:-12px'>\n" +
-            "                            </div>\n" +
-            "                                    </div>\n" +
-            "                                </div>\n" +
-            "                                </div>\n" +
-            "                            </div>\n" +
-            "                            <div class=\"col-md-4\" id=\"news\">\n" +
-            "                                <ul>\n" +
-            "                                    <li onclick=\"knowledge_detail_link(0)\"></li>\n" +
-            "                                    <li onclick=\"knowledge_detail_link(1)\"></li>\n" +
-            "                                    <li onclick=\"knowledge_detail_link(2)\"></li>\n" +
-            "                                    <li onclick=\"knowledge_detail_link(3)\"></li>\n" +
-            "                                    <li onclick=\"knowledge_detail_link(4)\"></li>\n" +
-            "                                    <li onclick=\"knowledge_detail_link(5)\"></li>\n" +
-            "                                    <li onclick=\"knowledge_detail_link(6)\"></li>\n" +
-            "                                    <li onclick=\"knowledge_detail_link(7)\"></li>\n" +
-            "                                    <li onclick=\"knowledge_detail_link(8)\"></li>\n" +
-            "                                </ul>\n" +
-            "                            </div>\n" +
-            "                        </div>\n" +
-            "                    </div>\n" +
-            "                </div>\n" +
-            "            </div>")
+    $("#knowledge").removeClass("hidden");
+    if ($(window).width() > 768) {
         $("#knowledge .col-md-8:first .row").each(function (index) {
             $(this).find("img:first").attr("src", home.path + home.knowledge.path + (index + 1) + ".jpg");
         });
@@ -995,149 +700,137 @@ function initKnowledge() {
             "                                    </div>\n" +
             "                                </div>\n" +
             "                                <div class=\"row\">\n" +
-            "                                <div class=\"col-md-5 col-xs-6 col-sm-5\">\n" +
+            "                                   <div class=\"col-md-5 col-xs-6 col-sm-5\">\n" +
             "                                    <div class=\"thumbnail\">\n" +
             "                                        <img src=\"\">\n" +
             "                                    </div>\n" +
-            "                                </div>\n" +
-            "                                <div class=\"col-md-7 col-xs-6 col-sm-7\">\n" +
+            "                                   </div>\n" +
+            "                                   <div class=\"col-md-7 col-xs-6 col-sm-7\">\n" +
             "                                    <div class=\"jumbotron\">\n" +
             "                                        <h3></h3>\n" +
             "                                        <p></p>\n" +
             "                                    </div>\n" +
+            "                                   </div>\n" +
             "                                </div>\n" +
-            "                                </div>\n" +
+            "                               <div class=\"row\">\n" +
+            "                                <div class=\"col-xs-4 col-xs-offset-4\">\n" +
+            "                                       <button class='btn btn-default center-block'>了解更多</button>\n" +
+            "                                    </div>\n" +
+            "                                </div>\n"+
             "                            </div>\n" +
             "                        </div>\n" +
             "                    </div>\n" +
             "                </div>\n" +
             "            </div>");
-            $("#knowledge .col-xs-12 .row").each(function (index) {
-                if (index<2){
-                    $(this).find("img:first").attr("src", home.path + home.knowledge.path +home.knowledge.classify[0].path+ home.knowledge.classify[0].img[index]);
-                    var j=home.knowledge.classify[0].link[index];
-                    $(this).attr("onclick","knowledge_detail_link("+j+")");
+        $("#knowledge .panel-body .col-xs-12 .row").each(function (index) {
+            if (index < 2) {
+                $(this).find("img:first").attr("src", home.path + home.knowledge.path + home.knowledge.classify[0].path + home.knowledge.classify[0].img[index]);
+                var j = home.knowledge.classify[0].link[index];
+                $(this).attr("onclick", "knowledge_detail_link(" + j + ")");
+            }
+        });
+        $("#knowledge h3").each(function (index) {
+            if (index < 3) {
+                var j = index - 1;
+                $(this).html(home.knowledge.classify[0].h3[j]);
+            }
+        });
+        $("#knowledge p").each(function (index) {
+            if (index < 3) {
+                var j = index - 1;
+                $(this).html(home.knowledge.classify[0].p[j]);
+            }
+        });
+        $("#knowledge .panel-body .col-xs-12 .row").each(function (index) {
+            if (index < 4 && index >= 2) {
+                $(this).find("img:first").attr("src", home.path + home.knowledge.path + home.knowledge.classify[1].path + home.knowledge.classify[1].img[index - 2]);
+                var j = home.knowledge.classify[1].link[index - 2];
+                $(this).attr("onclick", "knowledge_detail_link(" + j + ")");
+            }
+        });
+        $("#knowledge h3").each(function (index) {
+            if (index < 5 && index >= 3) {
+                var j = index - 3;
+                $(this).html(home.knowledge.classify[1].h3[j]);
+            }
+        });
+        $("#knowledge p").each(function (index) {
+            if (index < 5 && index >= 3) {
+                var j = index - 3;
+                $(this).html(home.knowledge.classify[1].p[j]);
+            }
+        });
+        $("#knowledge .panel-body .col-xs-12 .row").each(function (index) {
+            if (index < 6 && index >= 4) {
+                $(this).find("img:first").attr("src", home.path + home.knowledge.path + home.knowledge.classify[2].path + home.knowledge.classify[2].img[index - 4]);
+                var j = home.knowledge.classify[2].link[index - 4];
+                $(this).attr("onclick", "knowledge_detail_link(" + j + ")");
+            }
+        });
+        $("#knowledge h3").each(function (index) {
+            if (index < 7 && index >= 5) {
+                var j = index - 5;
+                $(this).html(home.knowledge.classify[2].h3[j]);
+            }
+        });
+        $("#knowledge p").each(function (index) {
+            if (index < 7 && index >= 5) {
+                var j = index - 5;
+                $(this).html(home.knowledge.classify[2].p[j]);
+            }
+        });
+        $("#knowledge .panel-body .col-xs-12 .row").each(function (index) {
+            if (index < 8 && index >= 6) {
+                $(this).find("img:first").attr("src", home.path + home.knowledge.path + home.knowledge.classify[3].path + home.knowledge.classify[3].img[index - 6]);
+                var j = home.knowledge.classify[3].link[index - 6];
+                $(this).attr("onclick", "knowledge_detail_link(" + j + ")");
+            }
+        });
+        $("#knowledge h3").each(function (index) {
+            if (index < 9 && index >= 7) {
+                var j = index - 7;
+                $(this).html(home.knowledge.classify[3].h3[j]);
+            }
+        });
+        $("#knowledge p").each(function (index) {
+            if (index < 9 && index >= 7) {
+                var j = index - 7;
+                $(this).html(home.knowledge.classify[3].p[j]);
+            }
+        });
+        if (/iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase())) {
+            $("#knowledge button:last").parent().css("display", "none");
+        }else {
+            $("#knowledge .panel-body .col-xs-12 .row").each(function (index) {
+                if (index<8&&index >= 4) {
+                    $(this).css("display", "none");
                 }
             });
-            $("#knowledge h3").each(function (index) {
-                if (index<3){
-                    var j = index - 1;
-                    $(this).html(home.knowledge.classify[0].h3[j]);
-                }
-            });
-            $("#knowledge p").each(function (index) {
-                if (index<3){
-                    var j = index - 1;
-                    $(this).html(home.knowledge.classify[0].p[j]);
-                }
-            });
-            $("#knowledge .col-xs-12 .row").each(function (index) {
-                if (index<4&&index>=2){
-                    $(this).find("img:first").attr("src", home.path + home.knowledge.path +home.knowledge.classify[1].path+ home.knowledge.classify[1].img[index-2]);
-                    var j=home.knowledge.classify[1].link[index-2];
-                    $(this).attr("onclick","knowledge_detail_link("+j+")");
-                }
-            });
-            $("#knowledge h3").each(function (index) {
-                if (index<5&&index>=3){
-                    var j = index - 3;
-                    $(this).html(home.knowledge.classify[1].h3[j]);
-                }
-            });
-            $("#knowledge p").each(function (index) {
-                if (index<5&&index>=3){
-                    var j = index - 3;
-                    $(this).html(home.knowledge.classify[1].p[j]);
-                }
-            });
-            $("#knowledge .col-xs-12 .row").each(function (index) {
-                if (index<6&&index>=4){
-                    $(this).find("img:first").attr("src", home.path + home.knowledge.path +home.knowledge.classify[2].path+ home.knowledge.classify[2].img[index-4]);
-                    var j=home.knowledge.classify[2].link[index-4];
-                    $(this).attr("onclick","knowledge_detail_link("+j+")");
-                }
-            });
-            $("#knowledge h3").each(function (index) {
-                if (index<7&&index>=5){
-                    var j = index - 5;
-                    $(this).html(home.knowledge.classify[2].h3[j]);
-                }
-            });
-            $("#knowledge p").each(function (index) {
-                if (index<7&&index>=5){
-                    var j = index - 5;
-                    $(this).html(home.knowledge.classify[2].p[j]);
-                }
-            });
-            $("#knowledge .col-xs-12 .row").each(function (index) {
-                if (index<8&&index>=6){
-                    $(this).find("img:first").attr("src", home.path + home.knowledge.path +home.knowledge.classify[3].path+ home.knowledge.classify[3].img[index-6]);
-                    var j=home.knowledge.classify[3].link[index-6];
-                    $(this).attr("onclick","knowledge_detail_link("+j+")");
-                }
-            });
-            $("#knowledge h3").each(function (index) {
-                if (index<9&&index>=7){
-                    var j = index - 7;
-                    $(this).html(home.knowledge.classify[3].h3[j]);
-                }
-            });
-            $("#knowledge p").each(function (index) {
-                if (index<9&&index>=7){
-                    var j = index - 7;
-                    $(this).html(home.knowledge.classify[3].p[j]);
-                }
-            });
-            $("#knowledge .col-xs-12 .row").each(function (index) {
-                if(index>=4){
-                    $(this).css("display","none");
-                }
-            });
-            $("#knowledge").append( "     <div class=\"row\">\n" +
-                "                                <div class=\"col-xs-4 col-xs-offset-4\">\n" +
-                "                                       <button class='btn btn-default center-block'>了解更多</button>\n"+
-                "                                    </div>\n" +
-                "                                </div>\n");
-            $("#knowledge button:last").click(function () {
-                $("#knowledge .col-xs-12 .row").each(function (index) {
-                    if(index>=4){
-                        $(this).css("display","block");
+            $("#knowledge button:last").parent().click(function () {
+                $("#knowledge .panel-body .col-xs-12 .row").each(function (index) {
+                    if (index<8&&index >= 4) {
+                        $(this).css("display", "block");
                     }
                 });
-                $(this).css("display","none");
-            })
+                $(this).css("display", "none");
+            });
+        }
     }
 }
 
 function initPropaganda() {
     //propaganda
-    $("#propaganda").html("<div class=\"col-md-12 col-lg-10 col-lg-offset-1 col-sm-12 col-xs-12\">\n" +
-        "                <div class=\"panel panel-default\">\n" +
-        "                    <div class=\"panel-heading\">\n" +
-        "                        <div class=\"center-block\">\n" +
-        "                            <h3 class=\"panel-title\">护肤宣传</h3>\n" +
-        "                            <p>——PROPAGANDA——</p>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                    <div class=\"panel-body\">\n" +
-        "                        <div class=\"row\">\n" +
-        "                            <div class=\"col-md-12\">\n"+
-        "                               <div class='video' onclick=\"window.parent.$('#video').modal('show')\"></div>\n"+
-        "                               <div class='shade'></div>\n"+
-        "                                <img>\n" +
-        "                            </div>\n" +
-        "                        </div>\n" +
-        "                    </div>\n" +
-        "                </div>\n" +
-        "            </div>")
+    $("#propaganda").removeClass("hidden");
     $("#propaganda img:first").attr("src", home.path + home.propaganda.path + home.propaganda.img);
     window.parent.init_video();
+    $("footer").removeClass("hidden");
 }
+
 function knowledge_classify(i) {
     $("#knowledge .col-md-8:first .row").each(function (index) {
-        $(this).find("img:first").attr("src", home.path + home.knowledge.path +home.knowledge.classify[i].path+ home.knowledge.classify[i].img[index]);
-        var j=home.knowledge.classify[i].link[index];
-        $(this).attr("onclick","knowledge_detail_link("+j+")");
+        $(this).find("img:first").attr("src", home.path + home.knowledge.path + home.knowledge.classify[i].path + home.knowledge.classify[i].img[index]);
+        var j = home.knowledge.classify[i].link[index];
+        $(this).attr("onclick", "knowledge_detail_link(" + j + ")");
     });
     $("#knowledge h3").each(function (index) {
         var j = index - 1;
@@ -1149,87 +842,8 @@ function knowledge_classify(i) {
     });
 }
 
-function initFooter() {
-    $("footer:last").html("<div class=\"row\">\n" +
-        "            <div class=\"col-md-12 col-lg-10 col-lg-offset-1 col-xs-12\">\n" +
-        "                <h3>广州魅诗肌生物科技有限公司</h3>\n" +
-        "            </div>\n" +
-        "            <div class=\"col-md-12 col-lg-10 col-lg-offset-1 col-xs-12\">\n" +
-        "                <address>\n" +
-        "                    地点：广州市天河区棠东东南路10号028房\n" +
-        "                </address>\n" +
-        "                <address>\n" +
-        "                    邮编：510000\n" +
-        "                </address>\n" +
-        "                <address>\n" +
-        "                    总部电话：020-28178401\n" +
-        "                </address>\n" +
-        "                <address>\n" +
-        "                    客服QQ：2485052805\n" +
-        "                </address>\n" +
-        "                <address>\n" +
-        "                    邮箱：2485052805@qq.com\n" +
-        "                </address>\n" +
-        "            </div>\n" +
-        "            <div class=\"col-md-12 col-lg-10 col-lg-offset-1 col-xs-12\" style=\"clear: both;position: relative\">\n" +
-        "                <address>\n" +
-        "                    <div id=\"telephone\"></div>\n" +
-        "                    <div id=\"qq\"></div>\n" +
-        "                    <div id=\"wechat1\" onclick=\"window.parent.$('#wechat').modal('show')\"></div>\n" +
-        "                </address>\n" +
-        "            </div>\n" +
-        "            <div class=\"col-md-12 col-lg-10 col-lg-offset-1 col-xs-12\" style=\"clear: both\">\n" +
-        "                <p>\n" +
-        "                    广州魅诗肌生物科技有限公司版权所有 粤ICP备 17035173号\n" +
-        "                </p>\n" +
-        "                <p>\n" +
-        "                    郑重声明：未经授权禁止转载，网页图文均属官方所有，否者追究法律责任\n" +
-        "                </p>\n" +
-        "            </div>\n" +
-        "        </div>");
-}
-
-$(document).scroll(function (e) {
-    var $ScrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
-    if ($ScrollBottom <20) {
-        onloadCount++;
-        switch (onloadCount) {
-            case 1:
-                initCooperation();
-                break;
-            case 2:
-                initProduct();
-                break;
-            case 3:
-                initProductStep1();
-                break;
-            case 4:
-                initProductStep2();
-                break;
-            case 5:
-                initProductStep3();
-                break;
-            case 6:
-                initProductStep4();
-                break;
-            case 7:
-                initHistory();
-                break;
-            case 8:
-                initKnowledge();
-                break;
-            case 9:
-                initPropaganda();
-                break;
-            case 10:
-                initFooter();
-                break;
-        }
-    }
-});
-
 function show_control() {
-    if ($(window).width()>768){
+    if ($(window).width() > 768) {
         $("#banner .carousel-control").each(function () {
             $(this).css("display", "block");
         })
@@ -1254,8 +868,90 @@ function product_detail_link(i) {
     window.parent.$("#mainframe").attr("src", "productDetail.html?i=" + i)
 }
 
+function iosscroll() {
+    if ($(document).height() - $(window).height() - $(window).scrollTop() < 50) {
+        initCooperation();
+        onloadCount++;
+        switch (onloadCount) {
+            case 1:
+                initCooperation();
+                break;
+            case 2:
+                initProductStep1();
+                break;
+            case 3:
+                initProductStep2();
+                break;
+            case 4:
+                initProductStep3();
+                break;
+            case 5:
+                initProductStep4();
+                break;
+            case 6:
+                initHistory();
+                break;
+            case 7:
+                initKnowledge();
+                break;
+            case 8:
+                initPropaganda();
+                clearInterval(Interval);
+                break;
+        }
+    }
+}
+
 $(document).ready(function () {
-    if ($(window).width()>768) {
+    initHome();
+    ininBrand();
+    initSkin();
+    load.onload = function () {
+        window.parent.$("#loading").modal('hide');
+    }
+    if (/iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase())) {
+        Interval = setInterval('iosscroll()', 0);
+        $("#banner #carousel-example-generic1").removeAttr('data-ride');
+        $("#skin #carousel-example-generic").removeAttr('data-ride');
+        $("#banner .carousel-control").each(function () {
+            $(this).css("display", "block");
+        })
+    }
+    else {
+        $(document).scroll(function (e) {
+            var $ScrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+            if ($ScrollBottom < 20) {
+                onloadCount++;
+                switch (onloadCount) {
+                    case 1:
+                        initCooperation();
+                        break;
+                    case 2:
+                        initProductStep1();
+                        break;
+                    case 3:
+                        initProductStep2();
+                        break;
+                    case 4:
+                        initProductStep3();
+                        break;
+                    case 5:
+                        initProductStep4();
+                        break;
+                    case 6:
+                        initHistory();
+                        break;
+                    case 7:
+                        initKnowledge();
+                        break;
+                    case 8:
+                        initPropaganda();
+                        break;
+                }
+            }
+        });
+    }
+    if ($(window).width() > 768) {
         $("#brand").mouseenter(function () {
             $("#brand img:last").addClass("animated slideInRight");
             $("#brand .jumbotron:first").addClass("animated slideInDown");
@@ -1268,13 +964,13 @@ $(document).ready(function () {
                 $("#brand img:first").css("display", "block");
                 $("#brand img:first").addClass("animated slideInUp");
                 $("#brand img:last").attr("src", "res/img/home/brand/big.jpg");
-                $("#brand .shade:first").css("display","block");
+                $("#brand .shade:first").css("display", "block");
             }, function () {
                 $("#brand .jumbotron:first").css("padding-top", "50px");
                 $("#brand .border_bottom:first").css("width", "20%");
                 $("#brand img:first").css("display", "none");
                 $("#brand img:last").attr("src", "res/img/home/brand/brand.jpg");
-                $("#brand .shade:first").css("display","none");
+                $("#brand .shade:first").css("display", "none");
             });
         });
         $("#skin").mouseenter(function () {
@@ -1310,13 +1006,13 @@ $(document).ready(function () {
                 $("#cooperation button:first").css("display", "block");
                 $("#cooperation button:first").css("color", "white");
                 $("#cooperation img:last").attr("src", "res/img/home/cooperation/big.jpg");
-                $("#cooperation .shade:first").css("display","block");
+                $("#cooperation .shade:first").css("display", "block");
             }, function () {
                 $("#cooperation .jumbotron:first").css("padding-top", "40px");
                 $("#cooperation h3:last").css("color", "#8c8c8c");
                 $("#cooperation button:first").css("display", "none");
                 $("#cooperation img:last").attr("src", "res/img/home/cooperation/cooperation.jpg");
-                $("#cooperation .shade:first").css("display","none");
+                $("#cooperation .shade:first").css("display", "none");
             });
         });
         $("#product").mouseenter(function () {
@@ -1388,24 +1084,24 @@ $(document).ready(function () {
                 $("#history img:last").css("display", "block");
                 $("#history img:first").addClass("animated slideInUp");
                 $("#history img:first").attr("src", "res/img/home/history/big.jpg");
-                $("#history .shade:first").css("display","block");
+                $("#history .shade:first").css("display", "block");
             }, function () {
                 $("#history .jumbotron:first").css("padding-top", "50px");
                 $("#history .border_bottom:first").css("width", "20%");
                 $("#history img:last").css("display", "none");
                 $("#history img:first").attr("src", "res/img/home/history/history.jpg");
-                $("#history .shade:first").css("display","none");
+                $("#history .shade:first").css("display", "none");
             });
         });
         $("#knowledge").mouseenter(function () {
             $("#knowledge .col-md-8:first .row").each(function (index) {
                 $(this).find("img:first").addClass("animated slideInUp");
-                $(this).find("img:first").css("animation-duration","1s");
+                $(this).find("img:first").css("animation-duration", "1s");
             })
             $("#knowledge .jumbotron").addClass("animated slideInUp");
-            $("#knowledge .jumbotron").css("animation-duration","2s");
+            $("#knowledge .jumbotron").css("animation-duration", "2s");
             $("#knowledge ul").addClass("animated slideInUp");
-            $("#knowledge ul").css("animation-duration","3s");
+            $("#knowledge ul").css("animation-duration", "3s");
         });
         $("#knowledge").mouseenter(function () {
             $("#knowledge .col-md-8:first .row").each(function () {
@@ -1426,36 +1122,36 @@ $(document).ready(function () {
             $("footer:last h3").css("animation-duration", "1s");
             $("footer:last address").each(function (index) {
                 $(this).addClass("animated slideInUp");
-                $(this).css("animation-duration", 0.8*(index+1)+"s");
+                $(this).css("animation-duration", 0.8 * (index + 1) + "s");
             });
             $("footer:last p").each(function (index) {
                 $(this).addClass("animated slideInUp");
-                $(this).css("animation-duration", 0.9*(index+1)+"s");
+                $(this).css("animation-duration", 0.9 * (index + 1) + "s");
             })
         });
         $("#propaganda").hover(function () {
-            $("#propaganda .shade:first").css("display","block");
-            $("#propaganda .video:first").css("display","block");
-        },function () {
-            $("#propaganda .shade:first").css("display","none");
-            $("#propaganda .video:first").css("display","none");
-        },function () {
+            $("#propaganda .shade:first").css("display", "block");
+            $("#propaganda .video:first").css("display", "block");
+        }, function () {
+            $("#propaganda .shade:first").css("display", "none");
+            $("#propaganda .video:first").css("display", "none");
+        }, function () {
         });
         $("footer:last").mouseenter(function () {
             $("footer:last h3").addClass("animated slideInUp");
             $("footer:last h3").css("animation-duration", "1s");
             $("footer:last address").each(function (index) {
                 $(this).addClass("animated slideInUp");
-                $(this).css("animation-duration", 0.8*(index+1)+"s");
+                $(this).css("animation-duration", 0.8 * (index + 1) + "s");
             });
             $("footer:last p").each(function (index) {
                 $(this).addClass("animated slideInUp");
-                $(this).css("animation-duration", 0.9*(index+1)+"s");
+                $(this).css("animation-duration", 0.9 * (index + 1) + "s");
             })
         });
-    }else {
+    } else {
         $("#propaganda").mouseenter(function () {
-            $("#propaganda .video:first").css("display","block");
+            $("#propaganda .video:first").css("display", "block");
         });
     }
 });
